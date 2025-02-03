@@ -1,0 +1,98 @@
+.contact {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background: url("https://t4.ftcdn.net/jpg/06/69/95/09/360_F_669950938_7EGCde3piThlCL3c4TLC76N50KJRW66d.jpg")
+    center / cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(5, 18, 66, 0.85), rgba(5, 18, 66, 0.85));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #40bfff;
+  color: white;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #2eaeff;
+  transform: translateY(-2px);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.contact-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    min-height: 400px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .contact-button {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}
+

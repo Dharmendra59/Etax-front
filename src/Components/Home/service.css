@@ -1,0 +1,147 @@
+.services {
+  padding: 100px 5%;
+  background: #f0f9ff;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-label {
+  display: inline-block;
+  background: rgba(64, 191, 255, 0.1);
+  color: #40bfff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #051242;
+}
+
+.highlight {
+  color: #40bfff;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  background: #40bfff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 28px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(360deg);
+  background: #051242;
+}
+
+.service-card h3 {
+  color: #051242;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.service-image {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.rounded-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .rounded-image {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 5%;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+

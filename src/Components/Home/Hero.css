@@ -1,0 +1,202 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+  background: url("https://media.istockphoto.com/id/1408022364/photo/multicultural-designer-sharing-ideas-during-a-meeting.jpg?s=612x612&w=0&k=20&c=1NvbeeATBpkLdpbifvU95m-5c2BFP-EZChfAZaqFzfQ=")
+    center / cover no-repeat;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(5, 18, 66, 0.85), rgba(5, 18, 66, 0.85));
+  padding: 80px 5%;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.welcome-text {
+  color: #40e0d0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #40bfff;
+  color: white;
+}
+
+.btn-secondary {
+  background: #40e0d0;
+  color: white;
+}
+
+.service-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 32px 24px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: #40bfff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.icon-circle svg {
+  font-size: 32px;
+  color: white;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.service-card p {
+  font-size: 16px;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-arrow.left {
+  left: 20px;
+}
+
+.nav-arrow.right {
+  right: 20px;
+}
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .service-highlights {
+    gap: 16px;
+  }
+
+  .service-card {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-overlay {
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .service-highlights {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .nav-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+

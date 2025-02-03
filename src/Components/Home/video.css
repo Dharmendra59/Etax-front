@@ -1,0 +1,206 @@
+.video-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background: url("https://live.themewild.com/taxrio/assets/img/service/02.jpg")
+    center / cover no-repeat;
+  color: white;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(5, 18, 66, 0.85), rgba(5, 18, 66, 0.85));
+  display: flex;
+  align-items: center;
+  padding: 80px 5%;
+}
+
+.content-container {
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  max-width: 600px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #40bfff;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #2eaeff;
+  transform: translateY(-2px);
+}
+
+.cta-button svg {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover svg {
+  transform: translateX(5px);
+}
+
+.play-button {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  z-index: 2;
+}
+
+.play-icon-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #40bfff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.play-icon {
+  color: white;
+  font-size: 24px;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.play-button:hover .play-icon {
+  transform: scale(1.2);
+}
+
+.ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #40bfff;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: ripple 2s infinite;
+  pointer-events: none;
+}
+
+.ripple:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.ripple:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .play-button {
+    right: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    min-height: 500px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .play-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .play-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .play-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section {
+    min-height: 400px;
+  }
+
+  .video-overlay {
+    padding: 60px 5%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .play-button {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin: 40px auto 0;
+  }
+
+  .content-container {
+    text-align: center;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

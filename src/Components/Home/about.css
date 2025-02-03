@@ -1,0 +1,234 @@
+.about {
+  padding: 100px 5%;
+  background: #fff;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.experience-badge {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background: #40bfff;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.experience-badge:hover {
+  transform: translateY(-5px);
+}
+
+.experience-badge .number {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+}
+
+.experience-badge .text {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blue-accent {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 200px;
+  height: 200px;
+  background: #40bfff;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.about-content {
+  padding-right: 40px;
+}
+
+.section-label {
+  display: inline-block;
+  background: rgba(64, 191, 255, 0.1);
+  color: #40bfff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #051242;
+}
+
+.highlight {
+  color: #40bfff;
+}
+
+.section-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(64, 191, 255, 0.05);
+  transform: translateX(10px);
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  background: #40bfff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+  transform: rotate(360deg);
+}
+
+.feature-content h3 {
+  color: #051242;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feature-content p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.discover-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #40bfff;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.discover-btn:hover {
+  background: #2eaeff;
+  transform: translateY(-2px);
+}
+
+.discover-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.discover-btn:hover svg {
+  transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 40px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .experience-badge {
+    padding: 15px;
+  }
+
+  .experience-badge .number {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 5%;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-content {
+    padding-right: 0;
+  }
+
+  .blue-accent {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .experience-badge {
+    padding: 12px;
+  }
+
+  .experience-badge .number {
+    font-size: 32px;
+  }
+
+  .feature-item {
+    padding: 16px;
+  }
+}
+
