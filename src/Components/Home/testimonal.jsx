@@ -14,7 +14,7 @@ const testimonials = [
     rating: 99,
     author: "Loreta Jones",
     role: "Customer",
-    image: "/placeholder.svg?height=80&width=80"
+    image: "https://live.themewild.com/taxrio/assets/img/testimonial/01.jpg"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const testimonials = [
     rating: 99,
     author: "Niesha Phips",
     role: "Customer",
-    image: "/placeholder.svg?height=80&width=80"
+    image: "https://live.themewild.com/taxrio/assets/img/testimonial/02.jpg"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const testimonials = [
     rating: 99,
     author: "John Smith",
     role: "Customer",
-    image: "/placeholder.svg?height=80&width=80"
+    image: "https://live.themewild.com/taxrio/assets/img/testimonial/03.jpg"
   }
 ]
 
