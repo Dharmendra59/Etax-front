@@ -72,6 +72,7 @@ export default function Footer() {
                 />
                 <button type="submit">
                   Subscribe <FaArrowRight />
+                  
                 </button>
               </form>
             </div>

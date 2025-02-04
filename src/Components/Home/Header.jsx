@@ -95,7 +95,7 @@ export default function Header() {
           <button className="search-btn" aria-label="Search">
             <FaSearch />
           </button>
-          <Link href="/contact" className="cta-button">
+          <Link href="/contact" className="ct-button">
             Let's Talk <FaArrowRight />
           </Link>
           <button className="mobile-menu" aria-label="Menu">

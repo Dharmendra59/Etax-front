@@ -29,17 +29,18 @@ export default function Hero() {
             <button className="btn btn-primary">About More</button>
             <button className="btn btn-secondary">Learn More</button>
           </div>
+          </div>
 
-          <div className="service-highlights">
-            <div className="service-card">
+          <div className="sv-highlights">
+            <div className="sv-card">
               <div className="icon-circle">
                 <FaCalculator />
               </div>
-              <h3>Best Taxation Service</h3>
+              <h3>Best Taxation sv</h3>
               <p>It is a long established fact that a reader will be distracted.</p>
             </div>
 
-            <div className="service-card">
+            <div className="sv-card">
               <div className="icon-circle">
                 <FaUserTie />
               </div>
@@ -47,7 +48,7 @@ export default function Hero() {
               <p>It is a long established fact that a reader will be distracted.</p>
             </div>
 
-            <div className="service-card">
+            <div className="sv-card">
               <div className="icon-circle">
                 <FaHeadset />
               </div>
@@ -55,7 +56,7 @@ export default function Hero() {
               <p>It is a long established fact that a reader will be distracted.</p>
             </div>
           </div>
-        </div>
+        
       </div>
     </section>
   )
