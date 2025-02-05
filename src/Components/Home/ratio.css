@@ -20,12 +20,13 @@
 
 .stat-card {
   display: flex;
-  align-items: center;
+  align-items:start;
   gap: 20px;
   padding: 30px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   transition: all 0.3s ease;
+  justify-content: left;
 }
 
 .stat-card:hover {
@@ -130,6 +131,7 @@
 
   .stat-card {
     padding: 20px;
+    padding-right: 150px;
   }
 
   .icon-circle {

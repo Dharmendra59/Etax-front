@@ -17,7 +17,7 @@ import Hero from '../Components/Home/Hero'
 const Home = () => {
   return (
     <div>
-      <Header />
+      
       <Hero />
       <About />
       <Services />
@@ -28,7 +28,7 @@ const Home = () => {
       
       <Contact />
       <Testimonials />  
-      <Footer />
+      
       
 
       

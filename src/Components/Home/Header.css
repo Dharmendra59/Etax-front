@@ -194,6 +194,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  font-size: 19px;
 }
 
 .nav-links a svg {
@@ -306,5 +307,47 @@
     display: none;
   }
 }
+.profile-popup {
+  position: absolute;
+  top: 116px;
+  right: 360px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 180px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.popup-item {
+  
+  padding: 10px;
+  color: #460ec7;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+
+.popup-item a {
+  text-decoration: none;
+  color: #030303;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.popup-item a:hover {
+      color: #fafcfd;
+      background-color: #2eaeff;
+      padding: 0 15px 0 5px;
+      border-radius: 10px;
+}
+
+
+
+.popup-item:last-child {
+  color: red;
+}
+
 
 

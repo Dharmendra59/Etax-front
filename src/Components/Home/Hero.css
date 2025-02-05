@@ -1,10 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Londrina+Outline&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+TZ+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 .hero {
   position: relative;
   height: 100vh;
   min-height: 800px;
-  background: url("https://media.istockphoto.com/id/1408022364/photo/multicultural-designer-sharing-ideas-during-a-meeting.jpg?s=612x612&w=0&k=20&c=1NvbeeATBpkLdpbifvU95m-5c2BFP-EZChfAZaqFzfQ=")
+  background: url("https://plus.unsplash.com/premium_photo-1661778490723-371305b4fb06?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVldGluZ3xlbnwwfHwwfHx8MA%3D%3D")
     center / cover no-repeat;
   color: white;
+}
+.logos {
+
+  position: absolute;
+  font-size: 160px;
+  font-family: "Kanit", serif;
+  font-weight: bolder;
+  right: -40px;
+  transform: rotate(90deg);
+  top: 160px;
+  -webkit-text-stroke: 2px rgba(173, 168, 168, 0.699);
+  -webkit-text-color: white;
+  color : transparent; 
+  
+  
 }
 
 .hero-overlay {
@@ -163,7 +179,11 @@
     background: rgb(10,29,67);
   }
 }
-
+@media (max-width: 815px) {
+      .logos {
+            display: none;
+      }
+}
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
@@ -185,6 +205,7 @@
   .nav-arrow {
     display: none;
   }
+  
 }
 
 @media (max-width: 480px) {

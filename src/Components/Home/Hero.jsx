@@ -17,6 +17,9 @@ export default function Hero() {
         <button className="nav-arrow right" aria-label="Next slide">
           <FaArrowRight />
         </button>
+        <div className="logos">
+            <span>E-TAX</span>
+        </div>
 
         <div className="hero-content">
           <span className="welcome-text">WELCOME TO E-TAX!</span>
