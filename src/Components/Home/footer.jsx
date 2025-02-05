@@ -61,7 +61,7 @@ export default function Footer() {
             </p>
             <div className="newsletter">
               <h3>Subscribe Our Newsletter</h3>
-              <form onSubmit="#" className="subscribe-form">
+              <form className="subscribe-form">
                 <input
                   type="email"
                   placeholder="Your Email"
