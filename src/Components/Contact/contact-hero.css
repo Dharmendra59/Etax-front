@@ -1,0 +1,117 @@
+.contact-heroc {
+  position: relative;
+  height: 400px;
+  background: url("https://images.pexels.com/photos/1367276/pexels-photo-1367276.jpeg?cs=srgb&dl=pexels-rebrand-cities-581004-1367276.jpg&fm=jpg")
+    center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(5, 18, 66, 0.726), rgba(5, 18, 66, 0.781));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroc-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  color: white;
+}
+
+.heroc-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInDown 0.5s ease forwards;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease 0.2s forwards;
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.home-link:hover {
+  color: #40e0d0;
+}
+
+.home-icon,
+.chevron-icon {
+  font-size: 14px;
+}
+
+.current-page {
+  color: #40e0d0;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-heroc {
+    height: 300px;
+  }
+
+  .heroc-content h1 {
+    font-size: 36px;
+  }
+
+  .breadcrumb {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heroc {
+    height: 250px;
+  }
+
+  .heroc-content h1 {
+    font-size: 28px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+  }
+}
+

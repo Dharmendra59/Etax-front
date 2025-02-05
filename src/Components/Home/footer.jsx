@@ -105,7 +105,7 @@ export default function Footer() {
 
             <div className="footer-section">
               <h3>Get In Touch</h3>
-              <div className="contact-info">
+              <div className="contct-info">
                 <div className="contact-item">
                   <FaMapMarkerAlt />
                   <div>

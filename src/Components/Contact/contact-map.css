@@ -1,0 +1,32 @@
+
+
+.map-iframe {
+  width: 100%;
+  /* max-width: 1200px; */
+  height: 450px;
+  border: none;
+
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .map-iframe {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-section {
+    padding: 10px;
+  }
+
+  .map-iframe {
+    height: 250px;
+  }
+}

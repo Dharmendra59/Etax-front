@@ -1,4 +1,4 @@
-.contact {
+.hcontact {
   position: relative;
   width: 100%;
   min-height: 500px;
@@ -11,7 +11,7 @@
   color: white;
 }
 
-.contact-overlay {
+.hcontact-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(rgba(5, 18, 66, 0.85), rgba(5, 18, 66, 0.85));
@@ -21,7 +21,7 @@
   padding: 60px 20px;
 }
 
-.contact-container {
+.hcontact-container {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -43,7 +43,7 @@
   margin-right: auto;
 }
 
-.contact-button {
+.hcontact-button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -57,7 +57,7 @@
   transition: all 0.3s ease;
 }
 
-.contact-button:hover {
+.hcontact-button:hover {
   background: #2eaeff;
   transform: translateY(-2px);
 }
@@ -66,12 +66,12 @@
   transition: transform 0.3s ease;
 }
 
-.contact-button:hover .arrow {
+.hcontact-button:hover .arrow {
   transform: translateX(5px);
 }
 
 @media (max-width: 768px) {
-  .contact {
+  .hcontact {
     min-height: 400px;
   }
 
@@ -90,7 +90,7 @@
     font-size: 28px;
   }
 
-  .contact-button {
+  .hcontact-button {
     padding: 14px 28px;
     font-size: 15px;
   }

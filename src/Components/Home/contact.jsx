@@ -2,11 +2,11 @@ import { FaArrowRight } from "react-icons/fa"
 import {Link} from "react-router-dom"
 import "./contact.css"
 
-export default function Contact() {
+export default function hcontact() {
   return (
-    <section className="contact">
-      <div className="contact-overlay">
-        <div className="contact-container">
+    <section className="hcontact">
+      <div className="hcontact-overlay">
+        <div className="hcontact-container">
           <h2 className="title">
             Maximize Your Potential With
             <br />
@@ -16,7 +16,7 @@ export default function Contact() {
             It is a long established fact that a reader will be distracted by the readable content of a page when
             looking at its layout.
           </p>
-          <Link href="/contact" className="contact-button">
+          <Link href="/hcontact" className="hcontact-button">
             Contact Now
             <FaArrowRight className="arrow" />
           </Link>
