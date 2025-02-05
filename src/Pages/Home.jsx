@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Home.css'
+
 import About from '../Components/Home/about'
 import Services from '../Components/Home/service'
 import CaseStudies from '../Components/Home/case-study'

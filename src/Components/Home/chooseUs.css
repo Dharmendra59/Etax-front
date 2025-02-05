@@ -116,7 +116,7 @@
 
 .image-stack {
   position: relative;
-  height: 500px;
+  height: 700px;
   width: 100%;
 }
 
@@ -131,17 +131,17 @@
 .image-top {
   right: 0;
   top: 0;
-  width: 60%;
-  height: 300px;
-  z-index: 2;
+  width: 70%;
+  height: 400px;
+  z-index: 1;
 }
 
 .image-bottom {
   left: 0;
   bottom: 0;
-  width: 60%;
-  height: 300px;
-  z-index: 1;
+  width: 70%;
+  height: 400px;
+  z-index: 2;
 }
 
 .image-top:hover,

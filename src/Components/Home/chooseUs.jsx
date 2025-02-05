@@ -57,15 +57,15 @@ export default function ChooseUs() {
             <img
               src="https://live.themewild.com/taxrio/assets/img/choose/02.jpg"
               alt="Business meeting"
-              width={500}
-              height={400}
+              width={600}
+              height={600}
               className="image-top"
             />
             <img
               src="https://live.themewild.com/taxrio/assets/img/choose/01.jpg"
               alt="Team collaboration"
-              width={500}
-              height={400}
+              width={600}
+              height={600}
               className="image-bottom"
             />
           </div>

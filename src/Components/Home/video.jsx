@@ -1,6 +1,7 @@
 import { FaPlay, FaArrowRight } from 'react-icons/fa'
 import { useState } from 'react'
 import './video.css'
+import { Link } from 'react-router-dom'
 
 export default function VideoSection() {
   const [isHovered, setIsHovered] = useState(false)
@@ -17,9 +18,11 @@ export default function VideoSection() {
             There are many variations of passages available but the majority have suffered alteration in some
             form by injected humour words which don't look even slightly believable.
           </p>
+          <Link to="/contact" >
           <button className="cta-button">
             Contact Us <FaArrowRight />
           </button>
+          </Link>
         </div>
 
         <button 
