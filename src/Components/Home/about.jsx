@@ -1,4 +1,4 @@
-import { FaUsers, FaUserTie, FaArrowRight } from 'react-icons/fa'
+import { FaUsers, FaUserTie, FaHeadset } from 'react-icons/fa'
 
 import './about.css'
 
@@ -19,7 +19,7 @@ export default function About() {
               height={600}
               className="main-image"
             /> */}
-            <img src="https://live.themewild.com/taxrio/assets/img/about/02.jpg" alt="Tax advisors in a meeting" width={600} height={600} className="main-image" />
+            <img src="https://images.pexels.com/photos/1367276/pexels-photo-1367276.jpeg?cs=srgb&dl=pexels-rebrand-cities-581004-1367276.jpg&fm=jpg" alt="Tax advisors in a meeting" width={600} height={600} className="main-image" />
           </div>
           <div className="blue-accent"></div>
         </div>
@@ -27,8 +27,8 @@ export default function About() {
         <div className="about-content">
           <span className="section-label">About Us</span>
           <h2 className="section-title">
-            We Are Trusted And Best{' '}
-            <span className="highlight">Tax Advisor</span> For You.
+          We Offer Popular Plans for{' '}
+            <span className="highlight">Finance & Tax</span>.
           </h2>
           <p className="section-description">
             There are many variations of passages available but the majority have
@@ -42,8 +42,8 @@ export default function About() {
                 <FaUsers />
               </div>
               <div className="feature-content">
-                <h3>Clients Satisfaction</h3>
-                <p>Take a look at our round up of the best shows.</p>
+                <h3>Our Mission</h3>
+                <p>There are many variations words passages of Lorem Ipsum don't available, but the majority.</p>
               </div>
             </div>
 
@@ -52,16 +52,27 @@ export default function About() {
                 <FaUserTie />
               </div>
               <div className="feature-content">
-                <h3>Professional Team</h3>
-                <p>It has survived words which not only five centuries.</p>
+                <h3>Our Vision</h3>
+                <p>There are many variations words passages of Lorem Ipsum don't available, but the majority.</p>
               </div>
             </div>
           </div>
 
-          <button className="discover-btn">
+          {/* <button className="discover-btn">
             Discover More
             <FaArrowRight />
-          </button>
+          </button> */}
+          <div className="advisor">
+            <div className="advisor-icon">
+            
+              <FaHeadset />
+            </div>
+            <div className="info">
+            <h1>Get Free Professional Advisor</h1>
+            <p>Ready To Help: <span>+(232) 456-7890</span></p>
+            </div>
+            
+          </div>
         </div>
       </div>
     </section>

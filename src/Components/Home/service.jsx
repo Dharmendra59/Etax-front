@@ -12,25 +12,25 @@ import './service.css'
 const services = [
   {
     icon: <FaCalculator />,
-    title: "Tax Planning",
+    title: "Financial Planning",
     description: "There are many variation of the package available majority have make suffered alteration.",
     image: "https://live.themewild.com/taxrio/assets/img/service/01.jpg"
   },
   {
     icon: <FaUserTie />,
-    title: "Personal Tax",
+    title: "Audit & Tax Planning",
     description: "There are many variation of the package available majority have make suffered alteration.",
     image: "https://live.themewild.com/taxrio/assets/img/service/02.jpg"
   },
   {
     icon: <FaShieldAlt />,
-    title: "Insurance Tax",
+    title: "Audit Report",
     description: "There are many variation of the package available majority have make suffered alteration.",
     image: "https://live.themewild.com/taxrio/assets/img/service/03.jpg"
   },
   {
     icon: <FaBuilding />,
-    title: "Corporate Tax",
+    title: "Finance Secure",
     description: "There are many variation of the package available majority have make suffered alteration.",
     image: "https://live.themewild.com/taxrio/assets/img/service/04.jpg"
   },
@@ -42,7 +42,7 @@ const services = [
   },
   {
     icon: <FaChartLine />,
-    title: "Tax Advisory",
+    title: "Insurance and Tax",
     description: "There are many variation of the package available majority have make suffered alteration.",
     image: "https://live.themewild.com/taxrio/assets/img/service/06.jpg"
   }
@@ -55,8 +55,8 @@ export default function Services() {
         <div className="services-header">
           <span className="section-label">Our Services</span>
           <h2 className="section-title">
-            What We Offers To Our<br />
-            <span className="highlight">Customers</span>
+            What We Provide <br />
+            {/* <span className="highlight">Customers</span> */}
           </h2>
         </div>
 

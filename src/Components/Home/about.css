@@ -148,33 +148,58 @@
   color: #666;
   line-height: 1.5;
 }
-
-.discover-btn {
+.advisor {
+  text-align: center;
+  display: flex;
+}
+.advisor-icon {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: #40bfff;
-  color: white;
-  border: none;
-  padding: 14px 28px;
+  padding: 20px;
+  background: #c2d0f0;
+  color: #40bfff;
+  border-bottom: 3px solid #40bfff;
+  font-size: 60px;      
   border-radius: 4px;
   font-weight: 500;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
-
-.discover-btn:hover {
-  background: #2eaeff;
-  transform: translateY(-2px);
+.advisor-icon:hover {
+  transform: translateY(-5px);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.info {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px;
+      text-align: left;
+      /* background-color: #051242; */
+      /* gap: 10px; */
 }
 
-.discover-btn svg {
-  transition: transform 0.3s ease;
+.info h1 {
+  color: #051242;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
-.discover-btn:hover svg {
-  transform: translateX(5px);
+.info p {
+  color: #8d8b8b;
+  line-height: 1.5;
+  font-weight: 600;
 }
+.info span {
+  color: #40bfff;
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 
 @media (max-width: 1024px) {
   .about-container {

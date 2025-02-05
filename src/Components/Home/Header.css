@@ -1,99 +1,11 @@
-/* header {
-      display: flex;
-      flex-direction: column;
-      height: 10vh;
-      width: 100%;
-}
-.top-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    
-      background-color: #f5f5f5;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      height: 40%;
-      background-color: #0a1d43;
-      color: white;
-}
-
-.top-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 20px;
-      height: 100%;
-      padding: 10px;
-      
-
-}
-
-.top-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-right: 20px;
-      background-color: rgb(51,182,255);
-      border-radius: 200px 0px 200px 0px;
-      height: 100%;
-      padding: 10px;
-}
-.icon {
-      color: rgb(51,182,255);
-      font-size: 18px;
-      font-weight: bold;
-}
-.bottom-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      height: 60%;
-}
-
-.bottom-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 20px;
-      height: 100%;
-      padding: 10px;
-
-}     
-
-.bottom-middle {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 20px;
-      height: 100%;
-      padding: 10px;
-
-}  
-.menu {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 20px;
-      height: 100%;
-      padding: 10px;
-
-}   
-.bottom-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-right: 20px;
-      height: 100%;
-      padding: 10px;
-
-} */
+/* Header Design with Updated Color Palette for Financial Website */
 .header {
   width: 100%;
-  background: #fff;
+  background: #f7f9fc;
 }
 
 .top-bar {
-  background: #051242;
+  background: #032a64;
   color: #fff;
   padding: 6px 5%;
   display: flex;
@@ -104,6 +16,10 @@
 .cont-info {
   display: flex;
   gap: 24px;
+}
+.cont-info a:hover {
+  cursor: pointer;
+  color: #28a745;
 }
 
 .cont-info a,
@@ -125,8 +41,6 @@
   align-items: center;
   gap: 24px;
 }
-
-
 
 .language-selector svg {
   font-size: 10px;
@@ -150,7 +64,8 @@
 }
 
 .social-links a:hover {
-  color: black;
+  color: #ffd700;
+  background-color: #28a745;
 }
 
 .main-nav {
@@ -160,25 +75,33 @@
   align-items: center;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 1.3s ease;
+  
+}
+.main-nav.scrolling {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
 }
 
 .logo {
-  /* flex-shrink: 0; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .logo h1 {
-      font-size: 2.6rem;
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
-      color: rgb(10,29,67);
+  font-size: 2.6rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0052cc;
 }
 .logo span {
-      color: #2eaeff;
+  color: #28a745;
 }
 .logo-link {
-      text-decoration: none;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -187,7 +110,7 @@
 }
 
 .nav-links a {
-  color: #051242;
+  color: #0052cc;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
@@ -203,7 +126,7 @@
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #40bfff;
+  color: #28a745;
 }
 
 .nav-right {
@@ -217,27 +140,26 @@
   border: none;
   cursor: pointer;
   padding: 8px;
-  color: #051242;
+  color: #0052cc;
   font-size: 18px;
 }
 
 .search-btn:hover {
-  color: #40bfff;
+  color: #28a745;
 }
 
 .ct-button {
-  background: #40bfff;
+  background: #28a745;
   color: #fff;
   padding: 12px 20px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 500;
-  transition: background-color 0.3s;
   transition: all 0.3s ease;
 }
 
 .ct-button:hover {
-  background: #2eaeff;
+  background: #ffd700;
   transform: translateY(-2px);
 }
 .ct-button svg {
@@ -255,7 +177,7 @@
   cursor: pointer;
   padding: 8px;
   font-size: 24px;
-  color: #051242;
+  color: #0052cc;
 }
 
 @media (max-width: 1024px) {
@@ -264,7 +186,6 @@
   }
 }
 
-  
 @media (max-width: 815px) {
   .top-bar {
     display: none;
@@ -297,9 +218,8 @@
     display: none;
   }
 }
-@media (max-width: 320px) {
-  
 
+@media (max-width: 320px) {
   .ct-button {
     display: none;
   }
@@ -307,47 +227,37 @@
     display: none;
   }
 }
-.profile-popup {
+
+.nav-item {
+  position: relative;
+  height: 100%;
+}
+
+.popup {
   position: absolute;
-  top: 116px;
-  right: 360px;
+  top: 20px;
+  left: 0;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px;
   width: 180px;
   text-align: center;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
 }
 
-.popup-item {
-  
-  padding: 10px;
-  color: #460ec7;
-  line-height: 1.7;
-  font-size: 18px;
-}
-
-
-.popup-item a {
+.popup a {
   text-decoration: none;
   color: #030303;
-  
-  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 16px;
   transition: all 0.3s ease;
 }
-.popup-item a:hover {
-      color: #fafcfd;
-      background-color: #2eaeff;
-      padding: 0 15px 0 5px;
-      border-radius: 10px;
+
+.popup a:hover {
+  color: #fff;
+  background-color: #28a745;
+  border-radius: 4px;
 }
-
-
-
-.popup-item:last-child {
-  color: red;
-}
-
-
-

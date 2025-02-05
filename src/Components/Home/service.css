@@ -1,6 +1,15 @@
+/* Define Colors */
+:root {
+  --primary-blue: #0052cc;
+  --accent-green: #28a745;
+  --gold-accent: #ffd700;
+  --neutral-bg: #f7f9fc;
+  --dark-blue-text: #0a1d43;
+}
+
 .services {
   padding: 100px 5%;
-  background: #f0f9ff;
+  background: var(--neutral-bg);
 }
 
 .services-container {
@@ -15,8 +24,8 @@
 
 .section-label {
   display: inline-block;
-  background: rgba(64, 191, 255, 0.1);
-  color: #40bfff;
+  background: rgba(0, 82, 204, 0.1);
+  color: var(--primary-blue);
   padding: 8px 16px;
   border-radius: 4px;
   font-weight: 500;
@@ -27,11 +36,11 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 1.2;
-  color: #051242;
+  color: var(--dark-blue-text);
 }
 
 .highlight {
-  color: #40bfff;
+  color: var(--primary-blue);
 }
 
 .services-grid {
@@ -58,7 +67,7 @@
 .service-icon {
   width: 70px;
   height: 70px;
-  background: #40bfff;
+  background: var(--primary-blue);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -71,11 +80,11 @@
 
 .service-card:hover .service-icon {
   transform: rotate(360deg);
-  background: #051242;
+  background: var(--dark-blue-text);
 }
 
 .service-card h3 {
-  color: #051242;
+  color: var(--accent-green);
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 16px;
@@ -144,4 +153,3 @@
     font-size: 28px;
   }
 }
-

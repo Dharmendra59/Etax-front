@@ -1,32 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Londrina+Outline&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+TZ+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 .hero {
   position: relative;
   height: 100vh;
   min-height: 800px;
   background: url("https://plus.unsplash.com/premium_photo-1661778490723-371305b4fb06?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVldGluZ3xlbnwwfHwwfHx8MA%3D%3D")
     center / cover no-repeat;
-  color: white;
+  color: #f7f9fc;
 }
-.logos {
 
+.logos {
   position: absolute;
   font-size: 160px;
   font-family: "Kanit", serif;
   font-weight: bolder;
-  right: -40px;
+  right: 20px;
   transform: rotate(90deg);
   top: 160px;
-  -webkit-text-stroke: 2px rgba(173, 168, 168, 0.699);
-  -webkit-text-color: white;
-  color : transparent; 
-  
-  
+  -webkit-text-stroke: 2px #ffd700;
+  -webkit-text-color: #f7f9fc;
+  color: transparent;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(5, 18, 66, 0.726), rgba(5, 18, 66, 0.781));
+  background: linear-gradient(rgba(10, 29, 67, 0.85), rgba(10, 29, 67, 0.9));
   padding: 80px 5%;
 }
 
@@ -37,7 +36,7 @@
 }
 
 .welcome-text {
-  color: #40e0d0;
+  color: #28a745;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -46,10 +45,11 @@
 }
 
 .hero h1 {
-  font-size: 56px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 24px;
+  color: #f9fafc;
 }
 
 .hero p {
@@ -57,6 +57,7 @@
   line-height: 1.3;
   max-width: 600px;
   margin-bottom: 30px;
+  color: #f7f9fc;
   opacity: 0.9;
 }
 
@@ -81,13 +82,13 @@
 }
 
 .btn-primary {
-  background: #40bfff;
-  color: white;
+  background: #0052cc;
+  color: #f7f9fc;
 }
 
 .btn-secondary {
-  background: #40e0d0;
-  color: white;
+  background: #28a745;
+  color: #f7f9fc;
 }
 
 .sv-highlights {
@@ -98,7 +99,7 @@
 }
 
 .sv-card {
-  background: rgb(10,29,67);
+  background: #0a1d43;
   padding: 32px 24px;
   border-radius: 8px;
   text-align: center;
@@ -112,7 +113,7 @@
 .icon-circle {
   width: 80px;
   height: 80px;
-  background: #40bfff;
+  background: #ffd700;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -122,17 +123,19 @@
 
 .icon-circle svg {
   font-size: 32px;
-  color: white;
+  color: #0a1d43;
 }
 
 .sv-card h3 {
   font-size: 24px;
   margin-bottom: 16px;
+  color: #28a745;
 }
 
 .sv-card p {
   font-size: 16px;
   margin-bottom: 0;
+  color: #f7f9fc;
   opacity: 0.8;
 }
 
@@ -148,7 +151,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #f7f9fc;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -176,14 +179,16 @@
 
   .sv-card {
     padding: 14px 16px;
-    background: rgb(10,29,67);
+    background: #0a1d43;
   }
 }
+
 @media (max-width: 815px) {
-      .logos {
-            display: none;
-      }
+  .logos {
+    display: none;
+  }
 }
+
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
@@ -205,7 +210,6 @@
   .nav-arrow {
     display: none;
   }
-  
 }
 
 @media (max-width: 480px) {
@@ -224,6 +228,3 @@
     padding: 16px;
   }
 }
-
-
-

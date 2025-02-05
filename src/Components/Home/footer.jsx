@@ -54,7 +54,7 @@ export default function Footer() {
                 height={50}
                 priority
               />
-              <h1>E-<span>TAX</span></h1>
+              <h1>QF<span>S</span></h1>
             </Link>
             <p className="about-text">
               We are many variations of passages available but the majority have suffered alteration in some form by injected humour words believable.
@@ -133,7 +133,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© Copyright 2025 <span className="highlight">E-TAX</span> All Rights Reserved.</p>
+          <p>© Copyright 2025 <span className="highlight">QFS</span> All Rights Reserved.</p>
           <div className="social-links">
             <Link href="#" aria-label="Facebook"><FaFacebookF /></Link>
             <Link href="#" aria-label="Twitter"><FaTwitter /></Link>
