@@ -5,7 +5,7 @@ import {
   FaUserTie,
   FaHeadset
 } from 'react-icons/fa'
-import './hero.css'
+import './Hero.css'
 
 export default function Hero() {
   return (
