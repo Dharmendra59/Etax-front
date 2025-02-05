@@ -15,7 +15,7 @@ import {
 import { Link } from 'react-router-dom';
 import Image from '../../assets/logo.svg';
 
-import './header.css';
+import './Header.css';
 
 export default function Header() {
   const [scrolling, setScrolling] = useState(false);
