@@ -25,7 +25,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(10, 29, 67, 0.671), rgba(10, 29, 67, 0.678));
+  background: linear-gradient(rgba(10, 39, 67, 0.548), rgba(10, 29, 67, 0.678));
   padding: 80px 5%;
 }
 

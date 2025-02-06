@@ -99,7 +99,8 @@ export default function Header() {
                 <a href="#" onClick={() => alert("You have logged out!")}>
                   Log Out
                 </a>
-                <Link to="/registration">Registration</Link>
+                <Link to="/register">Registration</Link>
+                <Link to="/password">Forgot Password</Link>
               </div>
             )}
           </div>
@@ -115,6 +116,7 @@ export default function Header() {
             </Link>
             {hoveredPopup === "blogs" && (
               <div className="popup">
+                <Link to="/blogs">Blogs</Link>
                 <Link to="/image">Image Gallery</Link>
                 <Link to="/video">Video Gallery</Link>
               </div>

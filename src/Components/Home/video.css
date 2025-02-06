@@ -41,7 +41,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #40bfff;
+  background: #28a745;
   color: white;
   border: none;
   padding: 14px 28px;
@@ -53,7 +53,7 @@
 }
 
 .cta-button:hover {
-  background: #2eaeff;
+  background: #ffd700;
   transform: translateY(-2px);
 }
 
@@ -84,7 +84,7 @@
   position: relative;
   width: 80px;
   height: 80px;
-  background: #40bfff;
+  background: #28a745;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -101,6 +101,7 @@
 
 .play-button:hover .play-icon {
   transform: scale(1.2);
+  color: #ffd700;
 }
 
 .ripple {
@@ -109,7 +110,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #40bfff;
+  background: #28a745;
   border-radius: 50%;
   opacity: 0.4;
   animation: ripple 2s infinite;
