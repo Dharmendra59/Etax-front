@@ -133,7 +133,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© Copyright 2025 <span className="highlight">QFS</span> All Rights Reserved.</p>
+          <p>© Copyright 2025 <span className="highligt">QFS</span> All Rights Reserved.</p>
           <div className="social-links">
             <Link href="#" aria-label="Facebook"><FaFacebookF /></Link>
             <Link href="#" aria-label="Twitter"><FaTwitter /></Link>

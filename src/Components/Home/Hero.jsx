@@ -24,22 +24,22 @@ export default function Hero() {
             suffered alteration in some form by injected humour.
           </p>
           <div className="cta-buttons">
-            <button className="btn btn-primary">Get Started</button>
-            <button className="btn btn-secondary">Get In Touch</button>
+            <button className="btn btn-primary">Get Started <FaArrowRight /></button>
+            <button className="btn btn-secondary">Get In Touch <FaArrowRight /></button>
           </div>
           </div>
 
           <div className="sv-highlights">
-            <div className="sv-card">
-              <div className="icon-circle">
+            {/* <div className="sv-card">
+              <div className="icon-circl">
                 <FaCalculator />
               </div>
               <h3>Best Taxation sv</h3>
               <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
-            </div>
+            </div> */}
 
             <div className="sv-card">
-              <div className="icon-circle">
+              <div className="icon-circl">
                 <FaUserTie />
               </div>
               <h3>Experts Team</h3>
@@ -47,7 +47,7 @@ export default function Hero() {
             </div>
 
             <div className="sv-card">
-              <div className="icon-circle">
+              <div className="icon-circl">
                 <FaHeadset />
               </div>
               <h3>24/7 Support</h3>

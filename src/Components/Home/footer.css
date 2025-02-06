@@ -1,5 +1,5 @@
 .footer {
-  background: #051242;
+  background: #032a64;
   color: white;
   padding: 80px 5% 30px;
   position: relative;
@@ -32,10 +32,10 @@
   font-size: 2.6rem;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(255, 255, 255);
+  color: #ffd700;
 }
 .footer-logo span {
-  color: #2eaeff;
+  color: #28a745;
 }
 
 .about-text {
@@ -73,16 +73,16 @@
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
-  background: #40bfff;
+  background: #28a745;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .subscribe-form button:hover {
-  background: #2eaeff;
+  background: #ffd700;
   transform: translateY(-2px);
 }
 
@@ -102,7 +102,7 @@
 }
 
 .footer-section h3 {
-  color: #40bfff;
+  color: #28a745;
   font-size: 20px;
   margin-bottom: 24px;
 }
@@ -124,7 +124,7 @@
 }
 
 .footer-section ul li a:hover {
-  color: #40bfff;
+  color: #ffd700;
   padding-left: 8px;
 }
 
@@ -140,7 +140,7 @@
 }
 
 .contact-item svg {
-  color: #40bfff;
+  color: #28a745;
   font-size: 20px;
   margin-top: 4px;
 }
@@ -163,8 +163,8 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.highlight {
-  color: #40bfff;
+.highligt {
+  color: #28a745;
 }
 
 .social-links {
@@ -185,7 +185,7 @@
 }
 
 .social-links a:hover {
-  background: #40bfff;
+  background: #28a745;
   transform: translateY(-2px);
 }
 
@@ -195,7 +195,7 @@
   right: 30px;
   width: 44px;
   height: 44px;
-  background: #40bfff;
+  background: #28a745;
   color: white;
   border: none;
   border-radius: 50%;
@@ -224,7 +224,8 @@
 }
 
 .scroll-top:hover {
-  background: #2eaeff;
+  background: #ffd700;
+  color: #0052cc;
   transform: translateY(-2px);
 }
 
