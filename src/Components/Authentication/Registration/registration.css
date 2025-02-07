@@ -1,0 +1,115 @@
+/* Overall container styling */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e6f7ff, #ffffff);
+}
+
+/* Registration card styling */
+.register-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+/* Form input group styling */
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-group input:focus {
+  border-color: #3b82f6;
+}
+
+/* Checkbox group styling */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-left: 0.5rem;
+}
+
+.checkbox-group a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+/* Button styling */
+.register-btn {
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 0.75rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Social media icons styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #3b82f6;
+}
+
+/* Login link styling */
+.register-card p a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.register-card p a:hover {
+  text-decoration: underline;
+}
