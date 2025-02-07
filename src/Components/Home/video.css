@@ -10,7 +10,7 @@
 .video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(5, 18, 66, 0.85), rgba(5, 18, 66, 0.85));
+  background: linear-gradient(rgba(10, 39, 67, 0.548), rgba(10, 29, 67, 0.678));
   display: flex;
   align-items: center;
   padding: 80px 5%;

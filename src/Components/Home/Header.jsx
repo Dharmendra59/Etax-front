@@ -1,37 +1,50 @@
 import { useState, useEffect } from "react";
-import { FaEnvelope, FaPhone, FaClock, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaSearch, FaBars, FaChevronDown, FaArrowRight } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaClock,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaSearch,
+  FaBars,
+  FaTimes,
+  FaChevronDown,
+  FaArrowRight,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Image from "../../assets/logo.svg";
-
 import "./Header.css";
 
 export default function Header() {
   const [scrolling, setScrolling] = useState(false);
-  const [hoveredPopup, setHoveredPopup] = useState(null);
-  const [isMobileMenu, setIsMobileMenu] = useState(false);
-  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
-
+  // Handle scrolling effect
   useEffect(() => {
-      const handleScroll = () => {
-        setScrolling(window.scrollY > 50);
-      };
-    
-      window.addEventListener("scroll", handleScroll);
-    
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
-    const handleBarsClick = () =>{
-      setIsMobileMenu(!isMobileMenu);
-  }
-  const BarsClick = () =>{
-      setIsMobileMenu(false)
-  }
-    
+    const handleScroll = () => setScrolling(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Toggle mobile menu
+  const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
+
+  // Close mobile menu when a link is clicked
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
+  // Toggle dropdown on click
+  const handleDropdownToggle = (menu) => {
+    setActiveDropdown(activeDropdown === menu ? null : menu);
+  };
+
   return (
-      <header className="header">
+    <header className="header">
       {/* Top bar */}
       <div className={`top-bar ${scrolling ? "hidden" : ""}`}>
         <div className="cont-info">
@@ -63,10 +76,10 @@ export default function Header() {
           </div>
         </div>
       </div>
-    
+
       {/* Main navigation */}
       <nav className={`main-nav ${scrolling ? "scrolling" : ""}`}>
-        <Link to="/" className="logo-link">
+        <Link to="/" className="logo-link" onClick={handleLinkClick}>
           <div className="logo">
             <img src={Image} alt="logo" width={50} height={40} priority />
             <h1>
@@ -74,88 +87,76 @@ export default function Header() {
             </h1>
           </div>
         </Link>
-    
-        <div className="nav-links">
-          <Link to="/" className="active">
-            Home <FaChevronDown />
+
+        <div className={`nav-links ${isMobileMenuOpen ? "mobile-visible" : ""}`}>
+          <Link to="/" className="active" onClick={handleLinkClick}>
+            Home
           </Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contact">Contact</Link>
-    
-          {/* Pages dropdown */}
-          <div
-            className="nav-item"
-            onMouseEnter={() => setHoveredPopup("pages")}
-            onMouseLeave={() => setHoveredPopup(null)}
-          >
-            <Link>
-              Pages <FaChevronDown />
+          <Link to="/about" onClick={handleLinkClick}>
+            About
+          </Link>
+          <Link to="/services" onClick={handleLinkClick}>
+            Services
+          </Link>
+          <Link to="/contact" onClick={handleLinkClick}>
+            Contact
+          </Link>
+
+          <div className="nav-item">
+            <Link to="#" 
+              onClick={() => handleDropdownToggle("pages")}>
+              Pages <FaChevronDown/>
             </Link>
-            {hoveredPopup === "pages" && (
+            
+            {activeDropdown === "pages" && (
               <div className="popup">
-                <Link to="/login">Log In</Link>
-                
-                <a href="#" onClick={() => alert("You have logged out!")}>
-                  Log Out
-                </a>
-                <Link to="/register">Registration</Link>
-                <Link to="/password">Forgot Password</Link>
+                <Link to="/login" onClick={handleLinkClick}>
+                  Log In
+                </Link>
+                <Link to="/register" onClick={handleLinkClick}>
+                  Registration
+                </Link>
+                <Link to="/password" onClick={handleLinkClick}>
+                  Forgot Password
+                </Link>
               </div>
             )}
           </div>
-    
-          {/* Blogs dropdown */}
-          <div
-            className="nav-item"
-            onMouseEnter={() => setHoveredPopup("blogs")}
-            onMouseLeave={() => setHoveredPopup(null)}
-          >
-            <Link>
-              Blogs <FaChevronDown />
+
+          <div className="nav-item">
+            <Link to="#" 
+              onClick={() => handleDropdownToggle("blogs")}>
+              Blogs <FaChevronDown/>
             </Link>
-            {hoveredPopup === "blogs" && (
+            
+            {activeDropdown === "blogs" && (
               <div className="popup">
-                <Link to="/blogs">Blogs</Link>
-                <Link to="/image">Image Gallery</Link>
-                <Link to="/video">Video Gallery</Link>
+                <Link to="/blogs" onClick={handleLinkClick}>
+                  Blogs
+                </Link>
+                <Link to="/image" onClick={handleLinkClick}>
+                  Image Gallery
+                </Link>
+                <Link to="/video" onClick={handleLinkClick}>
+                  Video Gallery
+                </Link>
               </div>
             )}
           </div>
         </div>
-    
+
         <div className="nav-right">
           <button className="search-btn" aria-label="Search">
             <FaSearch />
           </button>
-          <Link to="/contact" className="ct-button">
+          <Link to="/contact" className="ct-button" onClick={handleLinkClick}>
             Let's Talk <FaArrowRight />
           </Link>
-          <button className="mobile-menu" aria-label="Menu">
-            <FaBars onClick={handleBarsClick} />
-            {isMobileMenu && (
-                  <div className="mobile-menu-icon">
-                        <Link to="/" onClick={BarsClick}>Home</Link>
-                        <Link to="/about" onClick={BarsClick}>About</Link>
-                        <Link to="/services" onClick={BarsClick}>Services</Link>
-                        <Link to="/contact" onClick={BarsClick}>Contact</Link>
-                        <Link  onClick={() => setIsPopupVisible(!isPopupVisible)}>Pages <FaChevronDown /></Link>
-                        {isPopupVisible && (
-                                                  <div className="mobile-popup">
-                                                        <div className="popup-item">
-                                                              <Link to="/login">Log In</Link>
-                                                              <Link>Log Out</Link>
-                                                              <Link to="/registration" >Registration</Link>
-
-                                                        </div>
-                                                  </div>
-                                            )}
-                  </div>
-            )}
+          <button className="mobile-menu" onClick={toggleMobileMenu} aria-label="Menu">
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </nav>
     </header>
-    
   );
 }
