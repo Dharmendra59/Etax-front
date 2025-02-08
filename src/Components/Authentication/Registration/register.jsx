@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa";
-import "./Registration.css";
+import "./registration.css";
 
 const Register = () => {
   return (
