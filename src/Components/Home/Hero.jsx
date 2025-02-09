@@ -6,6 +6,7 @@ import {
   FaHeadset
 } from 'react-icons/fa'
 import './Hero.css'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -24,8 +25,12 @@ export default function Hero() {
             suffered alteration in some form by injected humour.
           </p>
           <div className="cta-buttons">
-            <button className="btn btn-primary">Get Started <FaArrowRight /></button>
-            <button className="btn btn-secondary">Get In Touch <FaArrowRight /></button>
+          <Link to="/contact" >
+          <button className="btn btn-primary">Get In Touch <FaArrowRight /></button>
+          </Link>
+          <Link to="get-started" >
+            <button className="btn btn-secondary">Get Started <FaArrowRight /></button>
+          </Link>
           </div>
           </div>
 

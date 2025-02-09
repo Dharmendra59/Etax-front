@@ -149,8 +149,8 @@ export default function Header() {
           <button className="search-btn" aria-label="Search">
             <FaSearch />
           </button>
-          <Link to="/contact" className="ct-button" onClick={handleLinkClick}>
-            Let's Talk <FaArrowRight />
+          <Link to="/get-started" className="ct-button" onClick={handleLinkClick}>
+            Get Started <FaArrowRight />
           </Link>
           <button className="mobile-menu" onClick={toggleMobileMenu} aria-label="Menu">
             {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
