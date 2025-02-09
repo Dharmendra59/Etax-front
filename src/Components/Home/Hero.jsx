@@ -3,7 +3,6 @@ import {
   FaArrowRight,
   FaCalculator,
   FaUserTie,
-  FaHeadset,
   FaSearchDollar,
   FaChartLine,
   FaBuilding,
