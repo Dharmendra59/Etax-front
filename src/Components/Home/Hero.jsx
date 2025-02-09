@@ -4,6 +4,11 @@ import {
   FaCalculator,
   FaUserTie,
   FaHeadset,
+  FaSearchDollar,
+  FaChartLine,
+  FaBuilding,
+  FaShieldAlt,
+  FaDollarSign
 } from "react-icons/fa";
 import "./Hero.css";
 import { Link } from "react-router-dom";
@@ -78,7 +83,7 @@ export default function Hero() {
 
           <div className="sv-card">
             <div className="icon-circl">
-              <FaHeadset />
+              <FaSearchDollar />
             </div>
             <h3>ITR Filing</h3>
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
@@ -86,7 +91,7 @@ export default function Hero() {
 
           <div className="sv-card">
             <div className="icon-circl">
-              <FaHeadset />
+              <FaChartLine />
             </div>
             <h3>E-Invoicing & E-Way Bills</h3>
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
@@ -94,9 +99,23 @@ export default function Hero() {
 
           <div className="sv-card">
             <div className="icon-circl">
-              <FaHeadset />
+              <FaBuilding />
             </div>
             <h3>GST Registration</h3>
+            <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
+          </div>
+          <div className="sv-card">
+            <div className="icon-circl">
+              <FaShieldAlt />
+            </div>
+            <h3>Tax Consultancy</h3>
+            <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
+          </div>
+          <div className="sv-card">
+            <div className="icon-circl">
+              <FaDollarSign />
+            </div>
+            <h3>Accounts Payable</h3>
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
           </div>
         </div>
