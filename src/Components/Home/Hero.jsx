@@ -1,5 +1,5 @@
-import { 
-  FaArrowLeft, 
+import {
+  FaArrowLeft,
   FaArrowRight,
   FaCalculator,
   FaUserTie,
@@ -7,16 +7,17 @@ import {
   FaChartLine,
   FaBuilding,
   FaShieldAlt,
-  FaDollarSign
+  FaDollarSign,
 } from "react-icons/fa";
 import "./Hero.css";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 export default function Hero() {
   const scrollRef = useRef(null);
+  const autoScrollInterval = useRef(null);
 
-  // Function to handle horizontal scroll
+  // Function to handle manual horizontal scroll
   const handleScroll = (direction) => {
     const scrollAmount = 300; // Amount of scroll
     if (direction === "left") {
@@ -25,6 +26,31 @@ export default function Hero() {
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
+
+  // Stop-and-go auto-scroll logic
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+
+    const autoScroll = () => {
+      const scrollAmount = 300; // Amount of scroll per step
+      if (
+        scrollContainer.scrollLeft + scrollContainer.offsetWidth >=
+        scrollContainer.scrollWidth
+      ) {
+        // Reset to start when reaching the end
+        scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        // Scroll by the set amount
+        scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    };
+
+    // Set an interval to scroll in chunks and pause
+    autoScrollInterval.current = setInterval(autoScroll, 2000); // Scroll every 2 seconds
+
+    // Clean up on component unmount
+    return () => clearInterval(autoScrollInterval.current);
+  }, []);
 
   return (
     <section className="hero">
@@ -35,7 +61,11 @@ export default function Hero() {
 
         <div className="hero-content">
           <span className="welcome-text">WELCOME TO QUICK FINANCIAL SERVICES !</span>
-          <h1>Providing Best<br />Financial Services</h1>
+          <h1>
+            Providing Best
+            <br />
+            Financial Services
+          </h1>
           <p>
             There are many variations of passages Lorem Ipsum available but the majority have
             suffered alteration in some form by injected humour.
