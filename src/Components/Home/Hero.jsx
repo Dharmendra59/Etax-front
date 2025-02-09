@@ -18,7 +18,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-content">
-          <span className="welcome-text">WELCOME TO QUICK FINANCIAL SUPPORT !</span>
+          <span className="welcome-text">WELCOME TO QUICK FINANCIAL SERVICES !</span>
           <h1>Providing Best<br />Financial Services</h1>
           <p>
             There are many variations of passages orem psum available but the majority have
