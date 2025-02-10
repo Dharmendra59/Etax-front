@@ -73,7 +73,7 @@ export default function Hero() {
           <div className="cta-buttons">
             <Link to="/contact">
               <button className="btn btn-primary">
-                Get In Touch <FaArrowRight />
+                Learn More <FaArrowRight />
               </button>
             </Link>
             <Link to="/get-started">
