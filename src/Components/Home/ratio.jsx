@@ -73,8 +73,8 @@ export default function Stats() {
       <div className="stats-container">
         <div className="stats-grid">
           {statsData.map((stat, index) => (
-            <div key={index} className="stat-card">
-              <div className="icon-circle">{stat.icon}</div>
+            <div key={index} className="stats-card">
+              <div className="icon-cirle">{stat.icon}</div>
               <div className="stat-content">
                 <h3 className="stat-number">{counters[index]}</h3>
                 <p className="stat-label">{stat.label}</p>
