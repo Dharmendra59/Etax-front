@@ -18,7 +18,7 @@ export default function ContactForm() {
       <div className="contact-cont">
         <div className="image-section">
           <img
-            src="https://live.themewild.com/taxrio/assets/img/contact/01.jpg"
+            src="https://st.depositphotos.com/1594308/2118/i/450/depositphotos_21186915-stock-photo-business-partners-discussing-documents.jpg"
             alt="Team meeting"
             className="contact-image"
           />

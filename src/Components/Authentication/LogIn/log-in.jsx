@@ -1,5 +1,6 @@
 import { FaEnvelope, FaLock, FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa"
 import "./log-in.css"
+import Image from "../../../assets/logo.svg";
 
 export default function LoginForm() {
   return (
@@ -7,9 +8,10 @@ export default function LoginForm() {
       <div className="login__container">
         <div className="login__header">
           <img 
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/login.PNG-pKdi3p3ryP0aI1NhFqyE7lEEldYU7h.png" 
-            alt="Taxrio Logo" 
+            src={Image}
+            alt=" Logo" 
             className="login__logo" 
+            
           />
           <h2 className="login__title">Login with your QFS account</h2>
         </div>
@@ -35,7 +37,7 @@ export default function LoginForm() {
 
           <div className="form__options">
             <div className="remember-me">
-              <input type="checkbox" id="remember" className="remember-me__checkbox" />
+              <input type="radio" id="remember" className="remember-me_checkbox" />
               <label htmlFor="remember" className="remember-me__label">
                 Remember Me
               </label>
