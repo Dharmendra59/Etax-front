@@ -20,7 +20,7 @@ export default function VideoSection() {
           </p>
           <Link to="/contact" >
           <button className="cta-button">
-            Contact Us <FaArrowRight />
+            Learn More <FaArrowRight />
           </button>
           </Link>
         </div>

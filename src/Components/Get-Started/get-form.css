@@ -40,7 +40,7 @@
 .form-section h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #1e1e1e;
+  color: #0052cc;
   margin-bottom: 16px;
 }
 
@@ -129,7 +129,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #0ba9c7;
+  background-color: #0052cc;
   transform: translateY(-2px);
 }
 
@@ -182,3 +182,46 @@
     width: 100%;
   }
 }
+/* Add the following CSS to your get-form.css */
+
+/* Style the file input section */
+.file-input-grup {
+  position: relative;
+}
+
+.file-label {
+  display: inline-block;
+  background-color: #fff;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+}
+
+
+
+.file-icon {
+  margin-right: 10px;
+  color: #0dcaf0;
+}
+
+.file-input {
+  display: none; /* Hide the default file input */
+}
+
+.file-name {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 10px;
+  color: #666;
+}
+
+/* To display the file name after selection */
+.file-input:focus + .file-label .file-name {
+  color: #666;
+}
+

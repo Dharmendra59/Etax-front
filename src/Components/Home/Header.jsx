@@ -157,6 +157,11 @@ export default function Header() {
           </button>
         </div>
       </nav>
+      <div className="bottom-btn">
+      <Link to="/get-started" className="bt-button" onClick={handleLinkClick}>
+            Get Started <FaArrowRight />
+          </Link>
+      </div>
     </header>
   );
 }

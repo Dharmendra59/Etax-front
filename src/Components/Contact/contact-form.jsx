@@ -22,23 +22,23 @@ export default function ContactForm() {
 
           <form className="contact-form">
             <div className="form-row">
-              <div className="input-group">
+              <div className="input-grup">
                 <FaUser className="input-icon" />
                 <input type="text" placeholder="Your Name" required />
               </div>
 
-              <div className="input-group">
+              <div className="input-grup">
                 <FaEnvelope className="input-icon" />
                 <input type="email" placeholder="Your Email" required />
               </div>
             </div>
 
-            <div className="input-group">
+            <div className="input-grup">
               <FaEdit className="input-icon" />
               <input type="text" placeholder="Your Subject" required />
             </div>
 
-            <div className="input-group">
+            <div className="input-grup">
               <FaComments className="input-icon comments-icon" />
               <textarea placeholder="Write Your Message" required rows={6}></textarea>
             </div>
