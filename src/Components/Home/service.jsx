@@ -62,7 +62,7 @@ export default function Services() {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
+            <div key={index} className="service-cards">
               <div className="service-icon">
                 {service.icon}
               </div>

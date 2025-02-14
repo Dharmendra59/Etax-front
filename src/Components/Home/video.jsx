@@ -10,7 +10,7 @@ export default function VideoSection() {
     <section className="video-section">
       <div className="video-overlay">
         <div className="content-container">
-          <h2 className="title">
+          <h2 className="titele">
             We deliver expertise and help your<br />
             business to grow up
           </h2>

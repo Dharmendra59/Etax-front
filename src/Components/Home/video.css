@@ -22,7 +22,7 @@
   z-index: 2;
 }
 
-.title {
+.titele {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
@@ -137,7 +137,7 @@
 }
 
 @media (max-width: 1024px) {
-  .title {
+  .titele {
     font-size: 40px;
   }
 
@@ -151,7 +151,7 @@
     min-height: 500px;
   }
 
-  .title {
+  .titele {
     font-size: 32px;
   }
 
@@ -183,7 +183,7 @@
     padding: 60px 5%;
   }
 
-  .title {
+  .titele {
     font-size: 28px;
   }
 

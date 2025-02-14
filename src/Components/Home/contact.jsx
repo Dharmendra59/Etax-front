@@ -7,7 +7,7 @@ export default function hcontact() {
     <section className="hcontact">
       <div className="hcontact-overlay">
         <div className="hcontact-container">
-          <h2 className="title">
+          <h2 className="titele">
             Maximize Your Potential With
             <br />
             Expert Consultation

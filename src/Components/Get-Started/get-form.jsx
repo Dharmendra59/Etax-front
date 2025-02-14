@@ -66,7 +66,7 @@ export default function ContactForm() {
                   accept="image/*, .pdf, .doc, .docx" // File types you want to allow
                   onChange={handleFileChange} // Handle the file input change event
                 />
-                <span className="file-name">{fileName || "Choose a file"}</span> {/* Display file name or default text */}
+                <span className="file-name">{fileName || "Select File"}</span> {/* Display file name or default text */}
               </label>
             </div>
 
