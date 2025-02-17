@@ -94,14 +94,18 @@ export default function Hero() {
 
         {/* Horizontal Scrolling Cards */}
         <div className="sv-highlights" ref={scrollRef}>
+          
+
+        <Link to="/get-started" className="sv-card">
+        
           <div className="sv-card">
             <div className="icon-circl">
-              <FaCalculator />
+              <FaUserTie />
             </div>
-            <h3>TDS</h3>
+            <h3>ITR Filing</h3>
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
           </div>
-
+        </Link>
           <div className="sv-card">
             <div className="icon-circl">
               <FaUserTie />
@@ -110,13 +114,7 @@ export default function Hero() {
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
           </div>
 
-          <div className="sv-card">
-            <div className="icon-circl">
-              <FaSearchDollar />
-            </div>
-            <h3>ITR Filing</h3>
-            <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
-          </div>
+          
 
           <div className="sv-card">
             <div className="icon-circl">
@@ -140,13 +138,7 @@ export default function Hero() {
             <h3>Tax Consultancy</h3>
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
           </div>
-          <div className="sv-card">
-            <div className="icon-circl">
-              <FaDollarSign />
-            </div>
-            <h3>Accounts Payable</h3>
-            <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
-          </div>
+          
         </div>
       </div>
     </section>
