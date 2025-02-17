@@ -98,7 +98,7 @@ export default function Hero() {
 
         <Link to="/get-started" className="sv-card">
         
-          <div className="sv-card">
+          <div className="sv-card" spellcheck="false">
             <div className="icon-circl">
               <FaUserTie />
             </div>
