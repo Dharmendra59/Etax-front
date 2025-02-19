@@ -1,45 +1,123 @@
-import React from "react";
-import { FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa";
-import "./registration.css";
+import React from "react"
+import { FaUser, FaEnvelope, FaLock, FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa"
+import "./registration.css"
+import Image from "../../../assets/logo.svg";
 
-const Register = () => {
+export default function Register() {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    password: "",
+    agreeToTerms: false,
+  })
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("Form submitted:", formData)
+  }
+
   return (
     <div className="register-container">
-      <div className="register-card">
-        <h1 className="logo">QFS</h1>
-        <p>Create your free Qfs account</p>
-        <form className="register-form">
+      <div className="register-box">
+        <div className="reglogo">
+          <img
+            src={Image}
+            alt=" Logo"
+            className="login__logo"
+
+          />
+        </div>
+
+        <h1 className="text">Create a free QFS account</h1>
+
+        <form onSubmit={handleSubmit}>
           <div className="input-group">
-            <input type="text" placeholder="Your Name" />
+            <FaUser className="input-icon" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="form__input"
+            />
           </div>
+
           <div className="input-group">
-            <input type="email" placeholder="Your Email" />
+            <FaEnvelope className="input-icon" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
+
           <div className="input-group">
-            <input type="password" placeholder="Your Password" />
+            <FaLock className="input-icon" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Your Password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
           </div>
-          <div className="checkbox-group">
-            <input type="checkbox" id="terms" />
+
+          <div className="terms-group">
+            <input
+              type="radio"
+              name="agreeToTerms"
+              id="terms"
+              checked={formData.agreeToTerms}
+              onChange={handleChange}
+              required
+            />
             <label htmlFor="terms">
-              I agree with the <a href="#!">Terms Of Service</a>.
+              I agree with the <a href="/terms">Terms Of Service</a>
             </label>
           </div>
-          <button type="submit" className="register-btn">
-            <span>Register</span>
+
+          <button type="submit" className="register-button">
+            Register
           </button>
         </form>
-        <p>Continue with social media</p>
-        <div className="social-icons">
-          <FaFacebookF className="icon" />
-          <FaGoogle className="icon" />
-          <FaTwitter className="icon" />
+
+        <div className="social-login">
+          <div className="social-login__divider">
+            <span className="social-login__text">Continue with social media</span>
+          </div>
+
+          <div className="social-login__buttons">
+            <button className="social-button social-button--facebook">
+              <FaFacebookF />
+            </button>
+            <button className="social-button social-button--google">
+              <FaGoogle />
+            </button>
+            <button className="social-button social-button--twitter">
+              <FaTwitter />
+            </button>
+          </div>
         </div>
-        <p>
-          Already have an account? <a href="#!">Login</a>.
+
+        <p className="login-link">
+          Already have an account? <a href="/login">Login</a>
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Register;

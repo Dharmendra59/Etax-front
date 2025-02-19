@@ -119,6 +119,7 @@
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s ease;
+  text-decoration: none;
   
 }
 

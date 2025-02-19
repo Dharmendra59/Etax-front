@@ -98,13 +98,13 @@ export default function Hero() {
 
         <Link to="/get-started" className="sv-card">
         
-          <div className="sv-card" spellcheck="false">
+          {/* <div className="sv-card" spellcheck="false"> */}
             <div className="icon-circl">
               <FaUserTie />
             </div>
             <h3>ITR Filing</h3>
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
-          </div>
+          {/* </div> */}
         </Link>
           <div className="sv-card">
             <div className="icon-circl">
