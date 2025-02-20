@@ -1,6 +1,7 @@
 // src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FrontLayout from './Pages/FrontLayout';
 import Home from './Pages/Home';
 import Header from './Components/Home/Header';
 import Footer from './Components/Home/footer';
@@ -12,16 +13,23 @@ import Password from './Pages/Password';
 import Register from './Pages/Registration';
 import Blogs from './Pages/Blogs';
 import Get from './Pages/GetStarted';
+//admin routs..
+import AdminLayout from './Components/Admin/AdminLayout';
+import Dashboard from './Components/Admin/AdminDashboard';
+import FileData from './Components/Admin/AdminFileData';
+
+
 
 const App = () => {
   return (
     <Router>
       <div>
-        <Header />
+        {/* <Header /> */}
         
         <Routes>
+          <Route path="/" element={<FrontLayout />} >
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<LogIn />} />
@@ -29,9 +37,18 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/get-started" element={<Get />} />
+          </Route>
+          
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path='dashboard' element={<Dashboard />} />
+            <Route path='dashboard' element={<Dashboard />} />
+            <Route path='file-data' element={<FileData />} />
+          </Route>
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
+        
       </div>
+
       
     </Router>
   );
