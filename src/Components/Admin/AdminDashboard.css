@@ -1,0 +1,41 @@
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: #1d3c6e;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    display: none; /* Initially hide the sidebar */
+  }
+
+  .sidebar.active {
+    display: block; /* Show sidebar when active class is added */
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .nav-item {
+    justify-content: center;
+  }
+}
