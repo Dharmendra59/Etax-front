@@ -1,11 +1,11 @@
 import React from 'react'
 
-const file_data = () => {
+const AdminFileData = () => {
   return (
     <div>
-      ITR Filing
+      itr filing
     </div>
   )
 }
 
-export default file_data
+export default AdminFileData

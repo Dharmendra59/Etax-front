@@ -1,8 +1,26 @@
+import React, { useState} from "react"
 import { FaEnvelope, FaLock, FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa"
 import "./log-in.css"
 import Image from "../../../assets/logo.svg";
+import { ToastContainer } from "react-toastify" 
 
 export default function LoginForm() {
+  const [loginInfo, setLoginInfo] = React.useState({
+    name: "",
+    email: "",
+    password: "",
+  })
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    console.log(name, value);
+    const copyLoginInfo = {...loginInfo}
+    copyLoginInfo[name] = value
+    setLoginInfo(copyLoginInfo)
+  }
+  console.log('logInInfo', loginInfo)
+  const handleSignup = (e)=>{
+    e.preventDefault();
+  }
   return (
     <div className="login">
       <div className="login__container">
@@ -16,10 +34,11 @@ export default function LoginForm() {
           <h2 className="login__title">Login with your QFS account</h2>
         </div>
 
-        <form className="login__form">
+        <form className="login__form" onSubmit={handleSignup}>
           <div className="form__group">
             <FaEnvelope className="form__icon" />
-            <input 
+            <input
+              onChange={handleChange} 
               type="email" 
               placeholder="Your Email" 
               className="form__input"
@@ -28,7 +47,8 @@ export default function LoginForm() {
 
           <div className="form__group">
             <FaLock className="form__icon" />
-            <input 
+            <input
+              onChange={handleChange} 
               type="password" 
               placeholder="Your Password" 
               className="form__input"
@@ -51,7 +71,7 @@ export default function LoginForm() {
             Login
           </button>
         </form>
-
+        <ToastContainer />
         <div className="social-login">
           <div className="social-login__divider">
             <span className="social-login__text">Continue with social media</span>

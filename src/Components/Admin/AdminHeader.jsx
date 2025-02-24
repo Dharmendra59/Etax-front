@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { FaBars, FaSearch, FaBell, FaUser, FaCog, FaSignOutAlt } from "react-icons/fa"
 import "./AdminHeader.css"
@@ -9,9 +7,14 @@ import Image from "../../assets/wlogo.svg"
 const AdminHeader = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isProfileOpen, setIsProfileOpen] = useState(false)
+  const [activeRoute, setActiveRoute] = useState("ADMIN") // Default to 'Dashboard'
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen)
   const toggleProfile = () => setIsProfileOpen(!isProfileOpen)
+
+  const handleRouteChange = (route) => {
+    setActiveRoute(route)
+  }
 
   return (
     <>
@@ -25,7 +28,9 @@ const AdminHeader = () => {
               src={Image}
               alt="ALogo"
             />
-            <h4 className="ALogo">QFS ADMIN</h4>
+            <h4 className="ALogo">
+              QFS <span className="Atext">{activeRoute}</span>
+            </h4>
           </div>
         </div>
         <div className="header-right">
@@ -57,10 +62,9 @@ const AdminHeader = () => {
           </div>
         </div>
       </header>
-      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} onRouteChange={handleRouteChange} />
     </>
   )
 }
 
 export default AdminHeader
-

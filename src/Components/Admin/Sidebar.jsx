@@ -1,7 +1,7 @@
 import { FaTachometerAlt, FaUsers, FaChartBar, FaCog } from "react-icons/fa"
 import "./Sidebar.css"
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = ({ isOpen, toggleSidebar, onRouteChange }) => {
   return (
     <>
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
@@ -9,16 +9,16 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           ×
         </button>
         <nav className="sidebar-nav">
-          <a href="/admin/dashboard">
+          <a href="/admin/dashboard" onClick={() => onRouteChange("Dashboard")}>
             <FaTachometerAlt /> Dashboard
           </a>
-          <a href="">
+          <a href="#" onClick={() => onRouteChange("Users")}>
             <FaUsers /> Users
           </a>
-          <a href="/admin/file-data">
+          <a href="/admin/file-data" onClick={() => onRouteChange("File Data")}>
             <FaChartBar /> File Data
           </a>
-          <a href="">
+          <a href="#" onClick={() => onRouteChange("Settings")}>
             <FaCog /> Settings
           </a>
         </nav>
@@ -29,4 +29,3 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 }
 
 export default Sidebar
-

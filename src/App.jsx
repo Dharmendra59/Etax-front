@@ -1,10 +1,8 @@
 // src/App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import FrontLayout from './Pages/FrontLayout';
 import Home from './Pages/Home';
-import Header from './Components/Home/Header';
-import Footer from './Components/Home/footer';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Services from './Pages/Services';
@@ -22,21 +20,20 @@ import FileData from './Components/Admin/AdminFileData';
 
 const App = () => {
   return (
-    <Router>
+    
       <div>
-        {/* <Header /> */}
         
         <Routes>
           <Route path="/" element={<FrontLayout />} >
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/password" element={<Password />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/get-started" element={<Get />} />
+          <Route path="services" element={<Services />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="login" element={<LogIn />} />
+          <Route path="password" element={<Password />} />
+          <Route path="register" element={<Register />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="get-started" element={<Get />} />
           </Route>
           
           <Route path="/admin" element={<AdminLayout />}>
@@ -50,7 +47,7 @@ const App = () => {
       </div>
 
       
-    </Router>
+   
   );
 };
 
