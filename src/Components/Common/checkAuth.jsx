@@ -1,17 +1,20 @@
-import React from 'react'
-import { Navigate, useLocation, useNavigate } from 'react-router-dom'
+import React from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
 
-const checkAuth = ({ isAuthenticated, user, children }) => {
-      const Location = useLocation();
-      if(!isAuthenticated){
-            return <Navigate to="/login" />
-      }
+const checkAuth = ({ isAuthenticated, user, children }) => {
+  const location = useLocation();
 
-  return (
-    <div>
-       
-    </div>
-  )
-}
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  } else {
+    if (user?.role === 'admin') {
+      return children;
+    } else if (user?.role === 'client') {
+      return <Navigate to="/client/dashboard" replace />;
+    } else {
+      return <Navigate to="/unauthorized" replace />;
+    }
+  }
+};
 
-export default checkAuth
+export default checkAuth;
