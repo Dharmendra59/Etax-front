@@ -1,4 +1,4 @@
-import { FaTachometerAlt, FaUsers, FaChartBar, FaCog } from "react-icons/fa"
+import { FaTachometerAlt, FaUsers, FaUser,FaHome, FaChartBar, FaCog } from "react-icons/fa"
 import "./Sidebar.css"
 
 const Sidebar = ({ isOpen, toggleSidebar, onRouteChange }) => {
@@ -12,8 +12,11 @@ const Sidebar = ({ isOpen, toggleSidebar, onRouteChange }) => {
           <a href="/admin/dashboard" onClick={() => onRouteChange("Dashboard")}>
             <FaTachometerAlt /> Dashboard
           </a>
+          <a href="/" onClick={() => onRouteChange("Dashboard")}>
+            <FaHome /> Home
+          </a>
           <a href="/admin/admin-profile" onClick={() => onRouteChange("Users")}>
-            <FaUsers /> Profile
+            <FaUser /> Profile
           </a>
           <a href="#" onClick={() => onRouteChange("Users")}>
             <FaUsers /> Users
