@@ -29,7 +29,7 @@ const App = () => {
   useEffect(()=>{
     const fetchUser = async ()=>{
       try{
-        const response = await axios.get("http://localhost:3000/auth/authCheck")
+        const response = await axios.get("http://localhost:3000/auth/authCheck",{ withCredentials : true,})
         console.log("response",response)
       }catch(error){
 

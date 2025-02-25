@@ -79,7 +79,6 @@ export default function Register() {
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              required
               className="form__input"
             />
           </div>
@@ -92,7 +91,6 @@ export default function Register() {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              required
             />
           </div>
 
@@ -104,7 +102,6 @@ export default function Register() {
               placeholder="Your Password"
               value={formData.password}
               onChange={handleChange}
-              required
             />
           </div>
 
@@ -126,6 +123,7 @@ export default function Register() {
             Register
           </button>
         </form>
+        <ToastContainer />
 
         <div className="social-login">
           <div className="social-login__divider">
