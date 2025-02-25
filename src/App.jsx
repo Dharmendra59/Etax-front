@@ -15,6 +15,7 @@ import Get from './Pages/GetStarted';
 import AdminLayout from './Components/Admin/AdminLayout';
 import Dashboard from './Components/Admin/AdminDashboard';
 import FileData from './Components/Admin/AdminFileData';
+import AdminProfile from './Components/Admin/AdminProfile';
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
             <Route path='dashboard' element={<Dashboard />} />
             <Route path='dashboard' element={<Dashboard />} />
             <Route path='file-data' element={<FileData />} />
+            <Route path='admin-profile' element={<AdminProfile />} />
           </Route>
         </Routes>
         {/* <Footer /> */}

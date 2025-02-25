@@ -2,15 +2,17 @@ import React from "react"
 import { FaUser, FaEnvelope, FaLock, FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa"
 import "./registration.css"
 import Image from "../../../assets/logo.svg";
+import { handleError, handleSuccess } from "../../../utils";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 export default function Register() {
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
     password: "",
-    agreeToTerms: false,
   })
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target
     setFormData((prev) => ({
@@ -19,9 +21,39 @@ export default function Register() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     console.log("Form submitted:", formData)
+    const { name, email, password} = formData;
+    if (!name || !email || !password) {
+      return handleError("All Fields Required")
+    }
+    try {
+      const url = "http://localhost:3000/auth/register"
+      const response = await fetch(url, {
+        method: "POST",
+        headers:{
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData),
+      }); 
+      const result = await response.json();
+      const { success, message, error } = result;
+      if (success) {
+        handleSuccess(message);
+        setTimeout(() => {
+          navigate('/login')
+        }, 1000);
+      }else if (error) {
+        const details = error?.details[0].message;
+        handleError(details);
+      }else if (!success) {
+        handleError(message);
+      }
+      console.log(result);
+    } catch(err) {
+        handleError(err);
+    }
   }
 
   return (
@@ -76,7 +108,7 @@ export default function Register() {
             />
           </div>
 
-          <div className="terms-group">
+          {/* <div className="terms-group">
             <input
               type="radio"
               name="agreeToTerms"
@@ -88,7 +120,7 @@ export default function Register() {
             <label htmlFor="terms">
               I agree with the <a href="/terms">Terms Of Service</a>
             </label>
-          </div>
+          </div> */}
 
           <button type="submit" className="register-button">
             Register

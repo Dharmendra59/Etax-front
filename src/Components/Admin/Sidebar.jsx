@@ -12,6 +12,9 @@ const Sidebar = ({ isOpen, toggleSidebar, onRouteChange }) => {
           <a href="/admin/dashboard" onClick={() => onRouteChange("Dashboard")}>
             <FaTachometerAlt /> Dashboard
           </a>
+          <a href="/admin/admin-profile" onClick={() => onRouteChange("Users")}>
+            <FaUsers /> Profile
+          </a>
           <a href="#" onClick={() => onRouteChange("Users")}>
             <FaUsers /> Users
           </a>

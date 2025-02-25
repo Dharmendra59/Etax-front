@@ -15,6 +15,12 @@ const AdminHeader = () => {
   const handleRouteChange = (route) => {
     setActiveRoute(route)
   }
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('LoggedInUser');
+    window.location.href = '/login';
+  };
+  const name = localStorage.getItem('LoggedInUser') || 'Admin';
 
   return (
     <>
@@ -44,18 +50,19 @@ const AdminHeader = () => {
             <FaBell />
             <span className="notification-badge">3</span>
           </div>
-          <div className="user-profile">
+          <div className="user-profile admin-profile__avatar">
             <button onClick={toggleProfile}>
-              <FaUser />
+              {name.charAt(0).toUpperCase()}
             </button>
+            
             <div className={`profile-dropdown ${isProfileOpen ? "open" : ""}`}>
-              <a href="#profile">
+              <a href="/admin/admin-profile">
                 <FaUser /> Profile
               </a>
               <a href="#settings">
                 <FaCog /> Settings
               </a>
-              <a href="#logout">
+              <a href="#logout" onClick={handleLogout}>
                 <FaSignOutAlt /> Logout
               </a>
             </div>
