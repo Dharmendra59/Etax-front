@@ -1,5 +1,5 @@
 // src/App.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import FrontLayout from './Pages/FrontLayout';
 import Home from './Pages/Home';
@@ -19,7 +19,23 @@ import AdminProfile from './Components/Admin/AdminProfile';
 
 
 
+
+
+
+
 const App = () => {
+  
+  useEffect(()=>{
+    const fetchUser = async ()=>{
+      try{
+        const response = await axios.get("http://localhost:3000/auth/authCheck")
+        console.log("response",response)
+      }catch(error){
+
+      }
+    }
+  },[])
+
   return (
     
       <div>
