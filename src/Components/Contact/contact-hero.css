@@ -25,7 +25,7 @@
   color: white;
 }
 
-.heroc-content h1 {
+.heroc-content .contacth1 {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -92,7 +92,7 @@
     height: 300px;
   }
 
-  .heroc-content h1 {
+  .heroc-content .contacth1 {
     font-size: 36px;
   }
 
@@ -106,7 +106,7 @@
     height: 250px;
   }
 
-  .heroc-content h1 {
+  .heroc-content .contacth1 {
     font-size: 28px;
   }
 

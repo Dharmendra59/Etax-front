@@ -40,12 +40,7 @@ const AdminHeader = () => {
           </div>
         </div>
         <div className="header-right">
-          <div className="searc-bar">
-            <input type="text" placeholder="Search..." />
-            <button>
-              <FaSearch />
-            </button>
-          </div>
+          
           <div className="notifications">
             <FaBell />
             <span className="notification-badge">3</span>

@@ -7,7 +7,7 @@ export default function Contactheroc() {
     <section className="contact-heroc">
       <div className="heroc-overlay">
         <div className="heroc-content">
-          <h1>Tax Filing</h1>
+          <h6 className="fileh1">Tax Filing</h6>
           <div className="breadcrumb">
             <Link to="/" className="home-link">
               <FaHome className="home-icon" />

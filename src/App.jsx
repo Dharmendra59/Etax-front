@@ -16,6 +16,7 @@ import AdminLayout from './Components/Admin/AdminLayout';
 import Dashboard from './Components/Admin/AdminDashboard';
 import FileData from './Components/Admin/AdminFileData';
 import AdminProfile from './Components/Admin/AdminProfile';
+import ContactData from './Components/Admin/AdminContactUsData'
 import axios from 'axios';
 
 
@@ -59,6 +60,7 @@ const App = () => {
             <Route path='dashboard' element={<Dashboard />} />
             <Route path='file-data' element={<FileData />} />
             <Route path='admin-profile' element={<AdminProfile />} />
+            <Route path='contact-data' element={<ContactData />} />
           </Route>
         </Routes>
         {/* <Footer /> */}

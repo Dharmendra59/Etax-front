@@ -7,7 +7,7 @@ export default function Servicesheros() {
     <section className="contact-heros">
       <div className="heros-overlay">
         <div className="heros-content">
-          <h1>Our Services</h1>
+          <h6 className="serviceh1">Our Services</h6>
           <div className="breadcrumb">
             <Link to="/" className="home-link">
               <FaHome className="home-icon" />

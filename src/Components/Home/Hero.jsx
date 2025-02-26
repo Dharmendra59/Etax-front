@@ -61,11 +61,11 @@ export default function Hero() {
 
         <div className="hero-content">
           <span className="welcome-text">WELCOME TO QUICK FINANCIAL SERVICES !</span>
-          <h1>
+          <h5 className="heroh1">
             Providing Best
             <br />
             Financial Services
-          </h1>
+          </h5>
           <p>
             There are many variations of passages Lorem Ipsum available but the majority have
             suffered alteration in some form by injected humour.

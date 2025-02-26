@@ -7,7 +7,7 @@ export default function Passwordherop() {
     <section className="contact-heroa">
       <div className="heroa-overlay">
         <div className="heroa-content">
-          <h1>Forgot Password</h1>
+          <h6 className="passh1">Forgot Password</h6>
           <div className="breadcrumb">
             <Link to="/" className="home-link">
               <FaHome className="home-icon" />

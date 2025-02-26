@@ -80,11 +80,11 @@ export default function Header() {
       {/* Main navigation */}
       <nav className={`main-nav ${scrolling ? "scrolling" : ""}`}>
         <Link to="/" className="logo-link" onClick={handleLinkClick}>
-          <div className="logo">
+          <div className="frontlogo">
             <img src={Image} alt="logo" width={50} height={40} priority />
-            <h1>
+            <h5 className="logoh1">
               QF<span>S</span>
-            </h1>
+            </h5>
           </div>
         </Link>
 

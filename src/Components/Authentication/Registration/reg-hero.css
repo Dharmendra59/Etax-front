@@ -25,7 +25,7 @@
   color: white;
 }
 
-.heroa-content h1 {
+.heroa-content .regh1 {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -92,7 +92,7 @@
     height: 300px;
   }
 
-  .heroa-content h1 {
+  .heroa-content .regh1 {
     font-size: 36px;
   }
 
@@ -106,7 +106,7 @@
     height: 250px;
   }
 
-  .heroa-content h1 {
+  .heroa-content .regh1 {
     font-size: 28px;
   }
 

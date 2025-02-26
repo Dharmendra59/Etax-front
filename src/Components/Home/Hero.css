@@ -44,7 +44,7 @@
   display: block;
 }
 
-.hero h1 {
+.hero .heroh1 {
   font-size: 60px;
   font-weight: 700;
   line-height: 1.2;
@@ -191,7 +191,7 @@
 }
 
 @media (max-width: 1024px) {
-  .hero h1 {
+  .hero .heroh1 {
     font-size: 48px;
   }
 
@@ -220,7 +220,7 @@
     padding: 60px 5%;
   }
 
-  .hero h1 {
+  .hero .heroh1 {
     font-size: 36px;
   }
 
@@ -235,7 +235,7 @@
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
+  .hero .heroh1 {
     font-size: 32px;
   }
 

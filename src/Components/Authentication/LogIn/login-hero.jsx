@@ -7,7 +7,7 @@ export default function LogInherol() {
     <section className="contact-heroa">
       <div className="heroa-overlay">
         <div className="heroa-content">
-          <h1>LogIn</h1>
+          <h6 className="loginh1">LogIn</h6>
           <div className="breadcrumb">
             <Link to="/" className="home-link">
               <FaHome className="home-icon" />

@@ -123,6 +123,7 @@
   display: none;
   flex-direction: column;
   min-width: 150px;
+  z-index: 99;
 }
 
 .profile-dropdown.open {

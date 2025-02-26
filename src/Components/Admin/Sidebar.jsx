@@ -24,6 +24,9 @@ const Sidebar = ({ isOpen, toggleSidebar, onRouteChange }) => {
           <a href="/admin/file-data" onClick={() => onRouteChange("File Data")}>
             <FaChartBar /> File Data
           </a>
+          <a href="/admin/contact-data" onClick={() => onRouteChange("File Data")}>
+            <FaChartBar /> Contact Data
+          </a>
           <a href="#" onClick={() => onRouteChange("Settings")}>
             <FaCog /> Settings
           </a>

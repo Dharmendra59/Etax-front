@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { FaSearch, FaTrash, FaEnvelope, FaPhone, FaFile, FaSortAlphaDown, FaSortAlphaUp } from "react-icons/fa"
-import "./AdminFileData.css"
+import "./AdminContactUsData.css"
 
 const initialData = [
   {
@@ -10,7 +10,6 @@ const initialData = [
     name: "John Doe",
     mobile: "123-456-7890",
     email: "john@example.com",
-    fileName: "document.pdf",
     query: "Tax inquiry",
   },
   {
@@ -18,7 +17,6 @@ const initialData = [
     name: "Jane Smith",
     mobile: "987-654-3210",
     email: "jane@example.com",
-    fileName: "report.docx",
     query: "Account status",
   },
   {
@@ -26,13 +24,12 @@ const initialData = [
     name: "Bob Johnson",
     mobile: "555-123-4567",
     email: "bob@example.com",
-    fileName: "invoice.xlsx",
     query: "Payment issue",
   },
   // Add more sample data as needed
 ]
 
-const FileDataSection = () => {
+const ContactDataSection = () => {
   const [data, setData] = useState(initialData)
   const [searchTerm, setSearchTerm] = useState("")
   const [sortColumn, setSortColumn] = useState("")
@@ -64,20 +61,12 @@ const FileDataSection = () => {
     if (a[sortColumn] > b[sortColumn]) return sortDirection === "asc" ? 1 : -1
     return 0
   })
-  const handleDownload = (fileName) => {
-    const fileUrl = `/files/${fileName}`
-    const link = document.createElement('a')
-    link.href = fileUrl
-    link.download = fileName
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
+
   
 
   return (
     <div className="file-data-section">
-      <h2 className="filetext">ITR File Data</h2>
+      <h2 className="filetext">Contact Data</h2>
       <div className="search-bar">
         <FaSearch className="search-icon" />
         <input type="text" placeholder="Search..." value={searchTerm} onChange={handleSearch} />
@@ -95,10 +84,6 @@ const FileDataSection = () => {
               <th onClick={() => handleSort("email")}>
                 Email {sortColumn === "email" && (sortDirection === "asc" ? <FaSortAlphaDown /> : <FaSortAlphaUp />)}
               </th>
-              <th onClick={() => handleSort("fileName")}>
-                File Name{" "}
-                {sortColumn === "fileName" && (sortDirection === "asc" ? <FaSortAlphaDown /> : <FaSortAlphaUp />)}
-              </th>
               <th onClick={() => handleSort("query")}>
                 Query {sortColumn === "query" && (sortDirection === "asc" ? <FaSortAlphaDown /> : <FaSortAlphaUp />)}
               </th>
@@ -111,7 +96,6 @@ const FileDataSection = () => {
                 <td>{item.name}</td>
                 <td>{item.mobile}</td>
                 <td>{item.email}</td>
-                <td>{item.fileName}</td>
                 <td>{item.query}</td>
                 <td>
                   <div className="action-buttons">
@@ -124,9 +108,7 @@ const FileDataSection = () => {
                     <a href={`tel:${item.mobile}`} className="contact-btn phone-btn">
                       <FaPhone />
                     </a>
-                    <button className="file-btn" onClick={() => handleDownload(item.fileName)}>
-                      <FaFile />
-                    </button>
+
                   </div>
                 </td>
               </tr>
@@ -138,5 +120,5 @@ const FileDataSection = () => {
   )
 }
 
-export default FileDataSection
+export default ContactDataSection
 

@@ -7,7 +7,7 @@ export default function Regheror() {
     <section className="contact-heroa">
       <div className="heroa-overlay">
         <div className="heroa-content">
-          <h1>Register</h1>
+          <h6 className="regh1">Register</h6>
           <div className="breadcrumb">
             <Link to="/" className="home-link">
               <FaHome className="home-icon" />
