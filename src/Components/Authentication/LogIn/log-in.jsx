@@ -40,7 +40,8 @@ export default function LoginForm() {
           handleSuccess(message);
           localStorage.setItem('token', token);
           setTimeout(() => {
-            navigate('/admin/dashboard', { replace: true });
+            // navigate('/admin/dashboard', { replace: true });
+            window.location.href = '/admin/dashboard';
           });
         }else if (error) {
           const details = error?.details[0].message;

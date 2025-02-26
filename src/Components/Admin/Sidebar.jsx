@@ -1,4 +1,5 @@
-import { FaTachometerAlt, FaUsers, FaUser,FaHome, FaChartBar, FaCog } from "react-icons/fa"
+import { NavLink } from "react-router-dom"
+import { FaTachometerAlt, FaUsers, FaUser, FaHome, FaChartBar, FaCog } from "react-icons/fa"
 import "./Sidebar.css"
 
 const Sidebar = ({ isOpen, toggleSidebar, onRouteChange }) => {
@@ -9,27 +10,27 @@ const Sidebar = ({ isOpen, toggleSidebar, onRouteChange }) => {
           ×
         </button>
         <nav className="sidebar-nav">
-          <a href="/admin/dashboard" onClick={() => onRouteChange("Dashboard")}>
+          <NavLink to="/admin/dashboard" onClick={() => onRouteChange("Dashboard")}>
             <FaTachometerAlt /> Dashboard
-          </a>
-          <a href="/" onClick={() => onRouteChange("Dashboard")}>
+          </NavLink>
+          <NavLink to="/" onClick={() => onRouteChange("Dashboard")}>
             <FaHome /> Home
-          </a>
-          <a href="/admin/admin-profile" onClick={() => onRouteChange("Users")}>
+          </NavLink>
+          <NavLink to="/admin/admin-profile" onClick={() => onRouteChange("Users")}>
             <FaUser /> Profile
-          </a>
-          <a href="#" onClick={() => onRouteChange("Users")}>
+          </NavLink>
+          <NavLink to="#" onClick={() => onRouteChange("Users")}>
             <FaUsers /> Users
-          </a>
-          <a href="/admin/file-data" onClick={() => onRouteChange("File Data")}>
+          </NavLink>
+          <NavLink to="/admin/file-data" onClick={() => onRouteChange("File Data")}>
             <FaChartBar /> File Data
-          </a>
-          <a href="/admin/contact-data" onClick={() => onRouteChange("File Data")}>
+          </NavLink>
+          <NavLink to="/admin/contact-data" onClick={() => onRouteChange("File Data")}>
             <FaChartBar /> Contact Data
-          </a>
-          <a href="#" onClick={() => onRouteChange("Settings")}>
+          </NavLink>
+          <NavLink to="#" onClick={() => onRouteChange("Settings")}>
             <FaCog /> Settings
-          </a>
+          </NavLink>
         </nav>
       </div>
       {isOpen && <div className="sidebar-overlay" onClick={toggleSidebar}></div>}

@@ -16,6 +16,7 @@ import Get from "./Pages/GetStarted";
 import AdminLayout from "./Components/Admin/AdminLayout";
 import Dashboard from "./Components/Admin/AdminDashboard";
 import FileData from "./Components/Admin/AdminFileData";
+import ContactData from "./Components/Admin/AdminContactUsData";
 import AdminProfile from "./Components/Admin/AdminProfile";
 
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
     const token = localStorage.getItem("token");
 
     if (token) {
-      axios.defaults.headers.common["Authorization"] = `Bearer ${token};`
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`
     }
 
     axios
@@ -74,6 +75,7 @@ const App = () => {
         >
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="file-data" element={<FileData />} />
+          <Route path="contact-data" element={<ContactData />} />
           <Route path="admin-profile" element={<AdminProfile />} />
         </Route>
       </Routes>
