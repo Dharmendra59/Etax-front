@@ -3,55 +3,31 @@ import { Navigate, useLocation } from "react-router-dom";
 function CheckAuth({ isAuthenticated, user, children }) {
   const location = useLocation();
 
-  console.log(location.pathname, isAuthenticated);
+  console.log("Current Path:", location.pathname, "Authenticated:", isAuthenticated, "Role:", user?.role);
 
-  if (location.pathname === "/") {
-    if (!isAuthenticated) {
-      return <Navigate to="/login" />;
-    } else {
-      if (user?.role === "admin") {
-        return <Navigate to="/admin/dashboard" />;
-      } else {
-        return <Navigate to="/" />;
-      }
-    }
-  }
-
+  // 🔹 Redirect Unauthenticated Users (Except for Login/Register)
   if (
     !isAuthenticated &&
-    !(
-      location.pathname.includes("/login") ||
-      location.pathname.includes("/register")
-    )
+    !["/login", "/register"].includes(location.pathname)
   ) {
     return <Navigate to="/login" />;
   }
 
+  // 🔹 Prevent Authenticated Users from Visiting Login/Register Again
   if (
     isAuthenticated &&
-    (location.pathname.includes("/login") ||
-      location.pathname.includes("/register"))
+    ["/login", "/register"].includes(location.pathname)
   ) {
-    if (user?.role === "admin") {
-      return <Navigate to="/admin/dashboard" />;
-    } else {
-      return <Navigate to="/" />;
-    }
+    return <Navigate to={user?.role === "admin" ? "/admin/dashboard" : "/"} />;
   }
 
-  if (
-    isAuthenticated &&
-    user?.role !== "admin" &&
-    location.pathname.includes("admin")
-  ) {
+  // 🔹 Restrict Admin Routes for Non-Admin Users
+  if (isAuthenticated && user?.role !== "admin" && location.pathname.startsWith("/admin")) {
     return <Navigate to="/unauth-page" />;
   }
 
-  if (
-    isAuthenticated &&
-    user?.role === "admin" &&
-    location.pathname.includes("/")
-  ) {
+  // 🔹 Redirect Admins to Dashboard when they try accessing root ("/")
+  if (isAuthenticated && user?.role === "admin" && location.pathname === "/") {
     return <Navigate to="/admin/dashboard" />;
   }
 

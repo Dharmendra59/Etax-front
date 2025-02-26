@@ -15,22 +15,19 @@ export default function LoginForm() {
   const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target
-    console.log(name, value);
     const copyLoginInfo = {...loginInfo}
     copyLoginInfo[name] = value
     setLoginInfo(copyLoginInfo)
   }
-  console.log('logInInfo', loginInfo)
   const handleSignup = async (e) => {
       e.preventDefault()
-      console.log("Form submitted:", loginInfo)
       const { email, password} = loginInfo;
       if ( !email || !password) {
         return handleError("All Fields Required")
       }
       try {
-        const url = "http://localhost:3000/auth/login"
-        const response = await fetch(url, {
+        const url = "http://localhost:3333/auth/login"
+        const response = await fetch(url, { 
           method: "POST",
           headers:{
             'Content-Type': 'application/json'
@@ -38,23 +35,19 @@ export default function LoginForm() {
           body: JSON.stringify(loginInfo),
         }); 
         const result = await response.json();
-        // console.log(result)
-        const { success, message, jwtToken, name, error, email } = result;
+        const { success, message, token, error } = result;
         if (success) {
           handleSuccess(message);
-          localStorage.setItem('token', jwtToken);
-          localStorage.setItem('LoggedInUser', name);
-          localStorage.setItem('LoggedInUserEmail', email);
+          localStorage.setItem('token', token);
           setTimeout(() => {
             navigate('/admin/dashboard', { replace: true });
-          }, 1000);
+          });
         }else if (error) {
           const details = error?.details[0].message;
           handleError(details);
         }else if (!success) {
           handleError(message);
         }
-        console.log(result);
       } catch(err) {
           handleError(err);
       }
@@ -147,6 +140,6 @@ export default function LoginForm() {
           </a>
         </p>
       </div>
-    </div>
-  )
+    </div>
+  )
 }
