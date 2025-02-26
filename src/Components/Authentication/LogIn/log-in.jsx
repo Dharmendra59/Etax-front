@@ -26,7 +26,7 @@ export default function LoginForm() {
         return handleError("All Fields Required")
       }
       try {
-        const url = "http://localhost:3333/auth/login"
+        const url = "http://localhost:3000/auth/login"
         const response = await fetch(url, { 
           method: "POST",
           headers:{

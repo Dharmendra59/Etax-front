@@ -31,7 +31,7 @@ const App = () => {
     }
 
     axios
-      .get("http://localhost:3333/auth/checkauth")
+      .get("http://localhost:3000/auth/checkauth")
       .then((response) => {
         setIsAuthenticated(true)
         setUser(response.data.user)
