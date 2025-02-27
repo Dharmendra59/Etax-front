@@ -106,7 +106,7 @@ export default function Register() {
           <button type="submit" className="register-button">Register</button>
         </form>
 
-        <div className="social-login">
+        {/* <div className="social-login">
           <div className="social-login__divider">
             <span className="social-login__text">Continue with social media</span>
           </div>
@@ -116,7 +116,7 @@ export default function Register() {
             <button className="social-button social-button--google"><FaGoogle /></button>
             <button className="social-button social-button--twitter"><FaTwitter /></button>
           </div>
-        </div>
+        </div> */}
 
         <p className="login-link">
           Already have an account? <a href="/login">Login</a>

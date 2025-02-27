@@ -110,21 +110,21 @@ export default function Footer() {
                   <FaMapMarkerAlt />
                   <div>
                     <strong>Our Address</strong>
-                    <p>25/B Milford Road, New York, USA</p>
+                    <p>96/18.,COLONEL GANJ KANPUR Kanpur Nagar Uttar Pradesh(208001).</p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <FaPhone />
                   <div>
                     <strong>Call Us</strong>
-                    <p>+2 123 654 7898</p>
+                    <p>7905876982</p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <FaEnvelope />
                   <div>
                     <strong>Mail Us</strong>
-                    <p>info@example.com</p>
+                    <p>itaxshikha7@gmail.com</p>
                   </div>
                 </div>
               </div>

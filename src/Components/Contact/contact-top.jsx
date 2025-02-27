@@ -10,7 +10,7 @@ export default function ContactInfo() {
             <FaMapMarkerAlt className="info-icon" />
           </div>
           <h3>Office Address</h3>
-          <p>25/B Milford, New York, USA</p>
+          <p>96/18.,COLONEL GANJ KANPUR Kanpur Nagar Uttar Pradesh(208001).</p>
         </div>
 
         <div className="info-card">
@@ -18,7 +18,7 @@ export default function ContactInfo() {
             <FaPhone className="info-icon" />
           </div>
           <h3>Call Us</h3>
-          <p>+2 123 4565 789</p>
+          <p>7905876982</p>
         </div>
 
         <div className="info-card">
@@ -26,7 +26,7 @@ export default function ContactInfo() {
             <FaEnvelope className="info-icon" />
           </div>
           <h3>Email Us</h3>
-          <p>info@example.com</p>
+          <p>itaxshikha7@gmail.com</p>
         </div>
 
         <div className="info-card">

@@ -69,7 +69,7 @@ export default function About() {
             </div>
             <div className="info">
             <h1>Get Free Professional Advisor</h1>
-            <p>Ready To Help: <span>+(232) 456-7890</span></p>
+            <p>Ready To Help: <span>+91 7905876982</span></p>
             </div>
             
           </div>

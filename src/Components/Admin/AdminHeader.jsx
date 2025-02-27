@@ -20,7 +20,7 @@ const AdminHeader = () => {
     localStorage.removeItem('LoggedInUser');
     window.location.href = '/login';
   };
-  const name = localStorage.getItem('LoggedInUser') || 'Admin';
+  // const name = localStorage.getItem(user.name) || 'Admin';
 
   return (
     <>
@@ -45,9 +45,11 @@ const AdminHeader = () => {
             <FaBell />
             <span className="notification-badge">3</span>
           </div>
-          <div className="user-profile admin-profile__avatar">
+          <div className="user-profile">
             <button onClick={toggleProfile}>
-              {name.charAt(0).toUpperCase()}
+            <FaUser />
+              {/* {name.charAt(0).toUpperCase()} */}
+              {/* {user.name || 'Admin'} */}
             </button>
             
             <div className={`profile-dropdown ${isProfileOpen ? "open" : ""}`}>

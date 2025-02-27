@@ -1,4 +1,4 @@
-import { FaUser, FaEnvelope, FaEdit, FaComments, FaPaperPlane } from "react-icons/fa"
+import { FaUser, FaEnvelope, FaEdit, FaComments, FaPaperPlane, FaPhone } from "react-icons/fa"
 import "./contact-form.css"
 
 export default function ContactForm() {
@@ -28,14 +28,20 @@ export default function ContactForm() {
               </div>
 
               <div className="input-grup">
-                <FaEnvelope className="input-icon" />
-                <input type="email" placeholder="Your Email" required />
-              </div>
+                <FaPhone className="input-icon" />
+                <input
+                  type="tel"
+                  placeholder="Mobile"
+                  required
+                  pattern="[0-9]{10}"
+                  title="Please enter a valid 10-digit mobile number"
+                  maxLength={10}
+                />              </div>
             </div>
 
             <div className="input-grup">
-              <FaEdit className="input-icon" />
-              <input type="text" placeholder="Your Subject" required />
+              <FaEnvelope className="input-icon" />
+              <input type="email" placeholder="Your Email" required />
             </div>
 
             <div className="input-grup">

@@ -76,7 +76,7 @@ const App = () => {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="file-data" element={<FileData />} />
           <Route path="contact-data" element={<ContactData />} />
-          <Route path="admin-profile" element={<AdminProfile />} />
+          <Route path="admin-profile" element={<AdminProfile user={user} />} />
         </Route>
       </Routes>
     </div>

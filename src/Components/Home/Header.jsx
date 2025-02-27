@@ -48,11 +48,11 @@ export default function Header() {
       {/* Top bar */}
       <div className={`top-bar ${scrolling ? "hidden" : ""}`}>
         <div className="cont-info">
-          <a href="mailto:info@example.com">
-            <FaEnvelope /> info@example.com
+          <a href="mailto:itaxshikha7@gmail.com">
+            <FaEnvelope /> itaxshikha7@gmail.com
           </a>
-          <a href="tel:+1234567898">
-            <FaPhone /> +2 123 654 7898
+          <a href="tel:7905876982">
+            <FaPhone /> 7905876982
           </a>
           <span>
             <FaClock /> Sun - Fri (08AM - 10PM)
