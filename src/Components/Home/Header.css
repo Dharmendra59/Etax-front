@@ -179,6 +179,7 @@
 
 .ct-button:hover {
   background: #ffd700;
+  color: #28a745;
   transform: translateY(-2px);
 }
 
@@ -245,6 +246,21 @@
   display: flex;
   flex-direction: column;
 }
+
+.nav-links a.active,
+.ct-button.active,
+.bt-button.active {
+  color: #ffd700; /* Highlight color */
+  font-weight: bold;
+  border-bottom: 2px solid #ffd700;
+}
+
+.nav-item a.active {
+  background: rgba(255, 102, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 
 .popup-item {
   display: flex;

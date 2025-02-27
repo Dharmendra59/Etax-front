@@ -13,18 +13,23 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:3000/contact-data', { // Ensure this is correct
+    const response = await fetch('http://localhost:3000/contact-data/submit', { // Ensure this is correct
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name,mobile, email, message }),
+      body: JSON.stringify({ name, mobile, email, message }),
     });
-
+    
     const result = await response.json();
+    // console.log(result)
     if (response.ok) {
       // alert("Send Successfully");
-      handleSuccess("Send Successfully");
+      handleSuccess("Thanks For Contacts");
+      setName('');
+      setMobile('');
+      setEmail('');
+      setMessage('');
 
     } else {
       // alert('Error: ' + result.msg);

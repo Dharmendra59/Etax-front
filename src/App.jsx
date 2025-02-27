@@ -18,13 +18,21 @@ import Dashboard from "./Components/Admin/AdminDashboard";
 import FileData from "./Components/Admin/AdminFileData";
 import ContactData from "./Components/Admin/AdminContactUsData";
 import AdminProfile from "./Components/Admin/AdminProfile";
+import { useUser } from "./context/user.context";
+import Profile from "./Pages/Profile";
+import Images from './Pages/Images';
+import Videos_section from './Pages/VideoSec';
+
+// notfound
+import NotFound from "./Components/Common/notFound";
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [user, setUser] = useState({})
+
+  const user = useUser()
+
   console.log(user)
 
-  useEffect(() => {
+  useEffect(() => { 
     const token = localStorage.getItem("token");
 
     if (token) {
@@ -34,8 +42,7 @@ const App = () => {
     axios
       .get("http://localhost:3000/auth/checkauth")
       .then((response) => {
-        setIsAuthenticated(true)
-        setUser(response.data.user)
+        user.login(response.data.user)
 
       })
       .catch((error) => {
@@ -49,7 +56,7 @@ const App = () => {
         <Route
           path="/"
           element={
-            <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+            <CheckAuth isAuthenticated={user.isAuthenticated} user={user.user}>
               <FrontLayout />
             </CheckAuth>
           }
@@ -62,13 +69,16 @@ const App = () => {
           <Route path="password" element={<Password />} />
           <Route path="register" element={<Register />} />
           <Route path="blogs" element={<Blogs />} />
+          <Route path="profile" element={user.isAuthenticated ? <Profile /> : <NotFound />} /> 
           <Route path="get-started" element={<Get />} />
+          <Route path="images" element={<Images />} />
+          <Route path="videos" element={<Videos_section />} />
         </Route>
 
         <Route
           path="/admin"
           element={
-            <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+            <CheckAuth isAuthenticated={user.isAuthenticated} user={user.user}>
               <AdminLayout />
             </CheckAuth>
           }
@@ -76,8 +86,11 @@ const App = () => {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="file-data" element={<FileData />} />
           <Route path="contact-data" element={<ContactData />} />
-          <Route path="admin-profile" element={<AdminProfile user={user} />} />
+          <Route path="admin-profile" element={<AdminProfile />} />
         </Route>
+
+          <Route path="*" element={<NotFound />} />
+
       </Routes>
     </div>
   );

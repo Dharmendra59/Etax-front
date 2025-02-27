@@ -1,20 +1,21 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App.jsx';
-import './index.css';
-import 'react-toastify/ReactToastify.css';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
+import "react-toastify/ReactToastify.css";
+import { UserProvider } from "./context/user.context";
 
-const root = document.getElementById('root');
+const root = document.getElementById("root");
 
 if (root) {
   createRoot(root).render(
-    <React.StrictMode>
+    <UserProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </React.StrictMode>
+    </UserProvider>
   );
 } else {
-  console.error('Root element not found');
+  console.error("Root element not found");
 }
