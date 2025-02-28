@@ -25,7 +25,7 @@ export default function ContactForm() {
       // console.log(result)
       if (response.ok) {
         // alert("Send Successfully");
-        handleSuccess("File Upload SuccessFull");
+        handleSuccess("File Uploaded SuccessFully");
         setName('');
         setMobile('');
         setEmail('');
