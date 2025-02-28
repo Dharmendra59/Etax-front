@@ -1,26 +1,28 @@
-import { useState } from "react"
-import { FaBars, FaSearch, FaBell, FaUser, FaCog, FaSignOutAlt } from "react-icons/fa"
-import "./AdminHeader.css"
-import Sidebar from "./Sidebar"
-import Image from "../../assets/wlogo.svg"
+import { useState } from "react";
+import { FaBars, FaBell, FaUser, FaCog, FaSignOutAlt, FaTachometerAlt } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import "./AdminHeader.css";
+import Sidebar from "./Sidebar";
+import Image from "../../assets/wlogo.svg";
 
 const AdminHeader = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const [isProfileOpen, setIsProfileOpen] = useState(false)
-  const [activeRoute, setActiveRoute] = useState("ADMIN") // Default to 'Dashboard'
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [activeRoute, setActiveRoute] = useState("ADMIN");
 
-  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen)
-  const toggleProfile = () => setIsProfileOpen(!isProfileOpen)
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+  const toggleProfile = () => setIsProfileOpen(!isProfileOpen);
 
   const handleRouteChange = (route) => {
-    setActiveRoute(route)
-  }
+    setActiveRoute(route);
+    setIsProfileOpen(false); // Close profile dropdown on route change
+  };
+
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('LoggedInUser');
     window.location.href = '/login';
   };
-  // const name = localStorage.getItem(user.name) || 'Admin';
 
   return (
     <>
@@ -30,45 +32,41 @@ const AdminHeader = () => {
             <FaBars />
           </button>
           <div className="Alogo">
-            <img
-              src={Image}
-              alt="ALogo"
-            />
+            <img src={Image} alt="ALogo" />
             <h4 className="ALogo">
               QFS <span className="Atext">{activeRoute}</span>
             </h4>
           </div>
         </div>
         <div className="header-right">
-          
           <div className="notifications">
             <FaBell />
             <span className="notification-badge">3</span>
           </div>
           <div className="user-profile">
             <button onClick={toggleProfile}>
-            <FaUser />
-              {/* {name.charAt(0).toUpperCase()} */}
-              {/* {user.name || 'Admin'} */}
+              <FaUser />
             </button>
-            
             <div className={`profile-dropdown ${isProfileOpen ? "open" : ""}`}>
-              <a href="/admin/admin-profile">
+              <NavLink to="/admin/dashboard" onClick={() => setIsProfileOpen(false)}>
+                <FaTachometerAlt /> Dashboard
+              </NavLink>
+              <NavLink to="/admin/admin-profile" onClick={() => setIsProfileOpen(false)}>
                 <FaUser /> Profile
-              </a>
-              <a href="#settings">
+              </NavLink>
+              <NavLink to="/admin/settings" onClick={() => setIsProfileOpen(false)}>
                 <FaCog /> Settings
-              </a>
-              <a href="#logout" onClick={handleLogout}>
+              </NavLink>
+              <NavLink to="/login" onClick={handleLogout}>
                 <FaSignOutAlt /> Logout
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
       </header>
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} onRouteChange={handleRouteChange} />
     </>
-  )
-}
+  );
+};
 
-export default AdminHeader
+export default AdminHeader;

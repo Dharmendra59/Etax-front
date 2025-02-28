@@ -1,4 +1,4 @@
-.video-section {
+.vidio-section {
   position: relative;
   width: 100%;
   min-height: 600px;
@@ -7,7 +7,7 @@
   color: white;
 }
 
-.video-overlay {
+.vidio-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(rgba(10, 39, 67, 0.548), rgba(10, 29, 67, 0.678));
@@ -83,7 +83,7 @@
 .play-icon-wrapper {
   position: relative;
   width: 80px;
-  height: 80px;
+  height: 60px;
   background: #28a745;
   border-radius: 50%;
   display: flex;
@@ -147,7 +147,7 @@
 }
 
 @media (max-width: 768px) {
-  .video-section {
+  .vidio-section {
     min-height: 500px;
   }
 
@@ -175,11 +175,11 @@
 }
 
 @media (max-width: 480px) {
-  .video-section {
+  .vidio-section {
     min-height: 400px;
   }
 
-  .video-overlay {
+  .vidio-overlay {
     padding: 60px 5%;
   }
 

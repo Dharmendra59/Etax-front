@@ -33,7 +33,7 @@ const AdminDashboard = () => {
   //   window.location.href = '/login';
   // };
   const cards = [
-    { icon: FaHome, title: "Home", path: "/", color: "#3498db" },
+    { icon: FaHome, title: "Dashboard", path: "/", color: "#3498db" },
     { icon: FaUser, title: "Profile", path: "/admin/admin-profile", color: "#2ecc71" },
     { icon: FaUsers, title: "Users", path: "/admin/users", color: "#e74c3c" },
     { icon: FaFileAlt, title: "File Data", path: "/admin/file-data", color: "#f39c12" },

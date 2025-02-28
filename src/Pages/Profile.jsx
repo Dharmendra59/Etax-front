@@ -1,11 +1,11 @@
-import React from "react";
-import { useUser } from "../context/user.context";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import React from 'react';
+// import './AdminProfile.css';
+import { useUser } from '../context/user.context';
+import { useNavigate } from 'react-router-dom';
 
-export default function Profile() {
+const AdminProfile = () => {
   const { user, logout } = useUser();
-  const navigate = useNavigate(); // Initialize navigation
-
+  const navigate = useNavigate();
   const handleClick = () => {
     localStorage.removeItem("token");
     logout();
@@ -13,11 +13,34 @@ export default function Profile() {
   };
 
   return (
-    <div>
-      <p>{user.name}</p>
-      <p>{user.email}</p>
-      <p>{user.role}</p>
-      <button onClick={handleClick}>Logout</button>
+    <div className="admin-profile">
+      <div className="admin-profile__card">
+        {/* Profile Picture */}
+        {/* <div className="admin-profile__avatar">
+          {user.profilePicture ? (
+            <img src={user.profilePicture} alt="Profile" className="admin-profile__image" />
+          ) : (
+            user.name ? user.name.charAt(0).toUpperCase() : 'A'
+          )}
+        </div> */}
+
+        <h2 className="admin-profile__title">Admin Profile</h2>
+
+        <div className="admin-profile__info">
+          <p><strong>Role:</strong> {user.role || 'Administrator'}</p>
+          <p><strong>Name:</strong> {user.name}</p>
+          <p><strong>Email:</strong> {user.email}</p>
+          {/* <p><strong>Phone:</strong> {user.phone || 'N/A'}</p> */}
+
+
+        </div>
+
+        <button className="admin-profile__logout" onClick={handleClick}>
+          Logout
+        </button>
+      </div>
     </div>
   );
-}
+};
+
+export default AdminProfile;

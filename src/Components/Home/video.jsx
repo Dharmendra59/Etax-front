@@ -3,12 +3,12 @@ import { useState } from 'react'
 import './video.css'
 import { Link } from 'react-router-dom'
 
-export default function VideoSection() {
+export default function videoSection() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section className="video-section">
-      <div className="video-overlay">
+    <section className="vidio-section">
+      <div className="vidio-overlay">
         <div className="content-container">
           <h2 className="titele">
             We deliver expertise and help your<br />
@@ -30,8 +30,8 @@ export default function VideoSection() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onClick={() => {
-            // Handle video play functionality
-            console.log('Play video')
+            // Handle vidio play functionality
+            console.log('Play vidio')
           }}
         >
           <div className="play-icon-wrapper">
