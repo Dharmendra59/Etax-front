@@ -139,7 +139,7 @@ const ImageGallery = () => {
     <section className="gallery-section">
       <div className="gallery-container">
         <div className="gallery-header">
-          <h2>Tax & GST Services Showcase</h2>
+          <h2>QFS Images Gallery Showcase</h2>
           <p>Discover our innovative range of tax and GST solutions tailored for your financial success</p>
         </div>
 

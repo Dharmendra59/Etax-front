@@ -104,7 +104,7 @@ const VideoGallery = () => {
     <section className="video-gallery-section">
       <div className="video-gallery-container">
         <div className="video-gallery-header">
-          <h2>Tax & GST Video Resources</h2>
+          <h2>QFS Video Gallery Resources</h2>
           <p>Watch our informative videos to better understand tax regulations and GST compliance</p>
         </div>
 

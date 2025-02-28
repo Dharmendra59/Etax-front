@@ -69,7 +69,7 @@ const ImageGallery = () => {
     <section className="gallery-section">
       <div className="gallery-container">
         <div className="gallery-header">
-          <h2>Our Tax & GST Services</h2>
+          <h2>QUICK FINANCIAL SERVICES </h2>
           <p>Explore our comprehensive range of tax and GST services designed to meet your financial needs</p>
         </div>
 
