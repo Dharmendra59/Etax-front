@@ -78,7 +78,8 @@ export default function ContactForm() {
                   pattern="[0-9]{10}"
                   title="Please enter a valid 10-digit mobile number"
                   maxLength={10}
-                />              </div>
+                /> 
+              </div>
             </div>
 
             <div className="input-grup">
