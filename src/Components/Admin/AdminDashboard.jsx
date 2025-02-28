@@ -35,7 +35,6 @@ const AdminDashboard = () => {
   const cards = [
     { icon: FaHome, title: "Dashboard", path: "/", color: "#3498db" },
     { icon: FaUser, title: "Profile", path: "/admin/admin-profile", color: "#2ecc71" },
-    { icon: FaUsers, title: "Users", path: "/admin/users", color: "#e74c3c" },
     { icon: FaFileAlt, title: "File Data", path: "/admin/file-data", color: "#f39c12" },
     { icon: FaAddressBook, title: "Contact Data", path: "/admin/contact-data", color: "#9b59b6" },
     { icon: FaCog, title: "Settings", path: "/settings", color: "#34495e" },

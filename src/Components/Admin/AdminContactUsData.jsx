@@ -37,7 +37,7 @@ const ContactDataSection = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://etax-back-1.onrender.com/contact-data/delete/${id}`, {
+      await fetch(`https://etax-back-1.onrender.com/contact/contact-data/delete/${id}`, {
         method: "DELETE",
       });
       setData(data.filter((item) => item._id !== id));

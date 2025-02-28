@@ -10,7 +10,7 @@ const ImageGallery = () => {
   const galleryItems = [
     {
       id: 1,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://caindelhi.in/wp-content/uploads/2017/11/5.2-How-to-File-GST-Returns.png",
       title: "GST Filing",
       category: "gst",
       description: "Streamlined GST filing services for businesses of all sizes",
@@ -18,7 +18,7 @@ const ImageGallery = () => {
     },
     {
       id: 2,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://www.shutterstock.com/image-photo/tax-planning-words-written-on-260nw-379874299.jpg",
       title: "Tax Planning",
       category: "tax",
       description: "Strategic tax planning to optimize your financial position",
@@ -26,7 +26,7 @@ const ImageGallery = () => {
     },
     {
       id: 3,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://www.shutterstock.com/image-photo/business-financing-accounting-banking-concept-260nw-2267738379.jpg",
       title: "Financial Analysis",
       category: "finance",
       description: "Comprehensive financial analysis and reporting",
@@ -34,7 +34,7 @@ const ImageGallery = () => {
     },
     {
       id: 4,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHwpj-BfqYveqvQ_0JWiCWZj_pXzBYhCG_6A&s",
       title: "Tax Compliance",
       category: "tax",
       description: "Stay compliant with all tax regulations and requirements",
@@ -42,7 +42,7 @@ const ImageGallery = () => {
     },
     {
       id: 5,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://masterbrains.co.in/wp-content/uploads/2024/07/Gst-Consultancy.png",
       title: "GST Consultation",
       category: "gst",
       description: "Expert consultation on GST implementation and compliance",
@@ -50,7 +50,7 @@ const ImageGallery = () => {
     },
     {
       id: 6,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://dbs7qpzv4mcv.cloudfront.net/668_1581422202.jpeg",
       title: "Financial Security",
       category: "finance",
       description: "Secure your financial future with our expert guidance",

@@ -15,12 +15,13 @@ import './video.css';
 const VideoGallery = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [activeVideo, setActiveVideo] = useState(null);
-  
+  const [activeTitle, setActiveTitle] = useState('');
+
   const galleryItems = [
     {
       id: 1,
-      videoId: "dQw4w9WgXcQ", // Example YouTube ID
-      thumbnail: '/placeholder.svg?height=300&width=400',
+      videoId: "MylpEHiXMds?si=1rAIqOcldFsrGcLU",
+      thumbnail: 'https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/gst-retrun-filing.jpg',
       title: 'GST Filing Explained',
       category: 'gst',
       duration: '4:30',
@@ -29,8 +30,8 @@ const VideoGallery = () => {
     },
     {
       id: 2,
-      videoId: "KMU0tzLwhbE", // Example YouTube ID
-      thumbnail: '/placeholder.svg?height=300&width=400',
+      videoId: "i2qXo7AaT54?si=lLQCR-H8sKKVa_BI",
+      thumbnail: 'https://media.licdn.com/dms/image/v2/D5612AQEq10hvfujoBw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1684670050075?e=2147483647&v=beta&t=sph5bIHEzip_d6LgsM2ZT22AYRUgtTIup5kS0rsBt50',
       title: 'Tax Planning Strategies',
       category: 'tax',
       duration: '6:15',
@@ -39,8 +40,8 @@ const VideoGallery = () => {
     },
     {
       id: 3,
-      videoId: "jNQXAC9IVRw", // Example YouTube ID
-      thumbnail: '/placeholder.svg?height=300&width=400',
+      videoId: "VE7-bNoWVXM?si=BGFnWo2XW9yEaFbH",
+      thumbnail: 'https://jaro-website.s3.ap-south-1.amazonaws.com/2024/08/How-to-analyze-financial-statements-1024x620-1.jpg',
       title: 'Financial Analysis Techniques',
       category: 'finance',
       duration: '8:45',
@@ -49,8 +50,8 @@ const VideoGallery = () => {
     },
     {
       id: 4,
-      videoId: "M7lc1UVf-VE", // Example YouTube ID
-      thumbnail: '/placeholder.svg?height=300&width=400',
+      videoId: "YPp_e0dhcKY?si=QZg20zvQrm4otC8I",
+      thumbnail: 'https://blog.saginfotech.com/wp-content/uploads/2023/11/tax-compliance-awareness-for-companies-individuals.jpg',
       title: 'Tax Compliance Guidelines',
       category: 'tax',
       duration: '5:20',
@@ -59,8 +60,8 @@ const VideoGallery = () => {
     },
     {
       id: 5,
-      videoId: "rfscVS0vtbw", // Example YouTube ID
-      thumbnail: '/placeholder.svg?height=300&width=400',
+      videoId: "4sDqSPOJchw?si=VdbEtU9gaLH5c7wf",
+      thumbnail: 'https://irisgst.s3.amazonaws.com/media/uploads/4point.png',
       title: 'GST Implementation Tips',
       category: 'gst',
       duration: '7:10',
@@ -69,8 +70,8 @@ const VideoGallery = () => {
     },
     {
       id: 6,
-      videoId: "eIrMbAQSU34", // Example YouTube ID
-      thumbnail: '/placeholder.svg?height=300&width=400',
+      videoId: "8KWuypd3SS0?si=19gbsPKdJufeTiwp",
+      thumbnail: 'https://www.collidu.com/media/catalog/product/img/1/4/145fc3e7214a483ce2d9903e083a6d5b4dbc733efacf65902e3aa3370f065e4e/financial-security-slide1.png',
       title: 'Financial Security Measures',
       category: 'finance',
       duration: '9:30',
@@ -87,13 +88,15 @@ const VideoGallery = () => {
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeFilter);
 
-  const openVideoModal = (videoId) => {
+  const openVideoModal = (videoId, title) => {
     setActiveVideo(videoId);
+    setActiveTitle(title);
     document.body.style.overflow = 'hidden';
   };
 
   const closeVideoModal = () => {
     setActiveVideo(null);
+    setActiveTitle('');
     document.body.style.overflow = 'auto';
   };
 
@@ -104,7 +107,7 @@ const VideoGallery = () => {
           <h2>Tax & GST Video Resources</h2>
           <p>Watch our informative videos to better understand tax regulations and GST compliance</p>
         </div>
-        
+
         <div className="video-gallery-filter">
           <button 
             className={activeFilter === 'all' ? 'active' : ''} 
@@ -131,7 +134,7 @@ const VideoGallery = () => {
             Financial Videos
           </button>
         </div>
-        
+
         <div className="video-gallery-grid">
           {filteredItems.map((item) => (
             <div className="video-item" key={item.id}>
@@ -142,7 +145,7 @@ const VideoGallery = () => {
                   <div className="video-overlay">
                     <button 
                       className="play-button"
-                      onClick={() => openVideoModal(item.videoId)}
+                      onClick={() => openVideoModal(item.videoId, item.title)}
                     >
                       <FaPlay />
                     </button>
@@ -152,16 +155,6 @@ const VideoGallery = () => {
                   <div className="video-icon">{item.icon}</div>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                  <div className="video-actions">
-                    <button className="action-button info-button">
-                      <FaInfoCircle />
-                      <span>Details</span>
-                    </button>
-                    <button className="action-button share-button">
-                      <FaShareAlt />
-                      <span>Share</span>
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -173,13 +166,14 @@ const VideoGallery = () => {
         <div className="video-modal" onClick={closeVideoModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
+              <h3>{activeTitle}</h3>
               <button className="close-button" onClick={closeVideoModal}>×</button>
             </div>
             <div className="modal-body">
               <div className="video-wrapper">
                 <iframe
                   src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
-                  title="YouTube video player"
+                  title={activeTitle}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
