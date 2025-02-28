@@ -36,7 +36,7 @@ const ImageGallery = () => {
     },
     {
       id: 4,
-      image: "https://www.taxshieldservice.com/wp-content/uploads/2024/11/logo-1.png",
+      image: "https://www.canarahsbclife.com/image/blog/tax-saving/tax-concept-hero-desktop.webp",
       title: "Tax Compliance Shield",
       category: "tax",
       description: "Stay compliant with all tax regulations and requirements",
@@ -44,7 +44,7 @@ const ImageGallery = () => {
     },
     {
       id: 5,
-      image: "/placeholder.svg?height=450&width=600",
+      image: "https://www.cac.net.in/blog/wp-content/uploads/2024/10/business-operation-m.jpg",
       title: "GST Consultation Elite",
       category: "gst",
       description: "Expert consultation on GST implementation and compliance",
@@ -52,7 +52,7 @@ const ImageGallery = () => {
     },
     {
       id: 6,
-      image: "/placeholder.svg?height=400&width=550",
+      image: "https://www.suhrlichty.com/wp-content/uploads/sites/123/2024/01/financial-plan-retirement-investment-diagram-concept-1024x658.jpg",
       title: "Financial Fortification",
       category: "finance",
       description: "Secure your financial future with our expert guidance",
@@ -60,7 +60,7 @@ const ImageGallery = () => {
     },
     {
       id: 7,
-      image: "/placeholder.svg?height=380&width=520",
+      image: "https://akm-img-a-in.tosshub.com/businesstoday/images/story/201912/corporate_tax2_660_311219073119.jpg?size=948:533",
       title: "Corporate Tax Mastery",
       category: "tax",
       description: "Tailored tax strategies for corporations and large businesses",
@@ -68,7 +68,7 @@ const ImageGallery = () => {
     },
     {
       id: 8,
-      image: "/placeholder.svg?height=420&width=580",
+      image: "https://d136nkzuw2elkh.cloudfront.net/uploads/ckeditor/pictures/281/content_GST_Auidt.JPG",
       title: "GST Audit Armor",
       category: "gst",
       description: "Comprehensive support for GST audits and inspections",
@@ -76,7 +76,7 @@ const ImageGallery = () => {
     },
     {
       id: 9,
-      image: "/placeholder.svg?height=360&width=480",
+      image: "https://i0.wp.com/tavaga.com/blog/wp-content/uploads/2023/05/image-34.png?resize=453%2C307&ssl=1",
       title: "Investment Strategy Pro",
       category: "finance",
       description: "Expert advice on investment strategies and portfolio management",
