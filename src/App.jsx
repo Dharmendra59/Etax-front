@@ -40,7 +40,7 @@ const App = () => {
     }
 
     axios
-      .get("http://localhost:3000/auth/checkauth")
+      .get("https://etax-back-1.onrender.com/auth/checkauth")
       .then((response) => {
         user.login(response.data.user)
 

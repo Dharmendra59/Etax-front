@@ -34,7 +34,7 @@ export default function Register() {
     }
 
     try {
-      const { data } = await axios.post("http://localhost:3000/auth/register", formData);
+      const { data } = await axios.post("https://etax-back-1.onrender.com/auth/register", formData);
       console.log("Response:", data);
 
       if (data?.success) {
