@@ -58,29 +58,11 @@ export default function LoginForm() {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-  
-      const token = await user.getIdToken(); // Get the Google token from Firebase
-  
-      const response = await fetch("https://etax-back-1.onrender.com/auth/google-login/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}` // Send token to backend
-        }
-      });
-  
-      const data = await response.json();
-  
-      if (data.success) {
-        localStorage.setItem("token", data.token); // Save backend token
-        alert(`Welcome ${user.displayName}`);
-        navigate("/admin/dashboard"); // Navigate after success
-      } else {
-        handleError(data.message || "Google login failed");
-      }
+      console.log("User Info:", user);
+      handleSuccess(`Welcome ${user.displayName}`);
+      navigate("/");
     } catch (error) {
-      console.error("Google login error:", error);
-      handleError("Google login failed");
+      console.error("Error during Google login", error);
     }
   };
   
