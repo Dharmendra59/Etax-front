@@ -9,6 +9,8 @@ import Video from '../Components/Home/video'
 import ChooseUs from '../Components/Home/chooseUs'
 import Contact from '../Components/Home/contact'
 import Testimonials from '../Components/Home/testimonal'
+import Team from '../Components/Home/team'
+
 
 import Hero from '../Components/Home/Hero'
 
@@ -20,11 +22,12 @@ const Home = () => {
       <About />
       <Services />
       <Ratio />
-      <CaseStudies />
-      <Video />
       <ChooseUs />
-      
+      <Video />
+
+      <Team />
       <Contact />
+
       <Testimonials />  
       
       
