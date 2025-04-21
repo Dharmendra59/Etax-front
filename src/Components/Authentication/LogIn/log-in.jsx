@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaEnvelope, FaLock, FaGoogle } from "react-icons/fa";
 import "./log-in.css";
 import Image from "../../../assets/logo.svg";
-import { ToastContainer } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate, useLocation } from "react-router-dom";
 import { handleError, handleSuccess } from "../../../utils";
 import { auth, provider, signInWithPopup } from '../../../firebase';
 
@@ -13,6 +13,14 @@ export default function LoginForm() {
     password: "",
   });
   const navigate = useNavigate();
+  const location = useLocation(); // Use location hook to get the state
+
+  // If there is a message from previous redirect, show it
+  useEffect(() => {
+    if (location.state?.message) {
+      toast.error(location.state.message); // Display toast message
+    }
+  }, [location.state]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,7 +61,6 @@ export default function LoginForm() {
     }
   };
 
-
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
@@ -65,9 +72,6 @@ export default function LoginForm() {
       console.error("Error during Google login", error);
     }
   };
-  
-  
-  
 
   return (
     <div className="login">

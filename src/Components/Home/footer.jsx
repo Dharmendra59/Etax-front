@@ -10,7 +10,7 @@ import {
   FaYoutube,
   FaArrowUp
 } from 'react-icons/fa'
-import Image from '../../assets/wlogo.svg'
+import Image from '../../assets/blogo.PNG'
 import {Link} from 'react-router-dom'
 import './footer.css'
 
@@ -49,12 +49,12 @@ export default function Footer() {
             <Link href="/" className="footer-logo">
               <img
                 src={Image}
-                alt="Taxrio Logo"
-                width={60}
-                height={50}
+                alt="QFS Logo"
+                width={300}
+                height={100}
                 priority
               />
-              <h1>QF<span>S</span></h1>
+              
             </Link>
             <p className="about-text">
               We are many variations of passages available but the majority have suffered alteration in some form by injected humour words believable.

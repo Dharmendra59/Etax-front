@@ -4,7 +4,7 @@
   position: relative;
   height: 100vh;
   min-height: 800px;
-  background: url("https://plus.unsplash.com/premium_photo-1661778490723-371305b4fb06?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVldGluZ3xlbnwwfHwwfHx8MA%3D%3D")
+  background: url("../../assets/mainimg.PNG")
     center / cover no-repeat;
   color: #f7f9fc;
 }
@@ -25,7 +25,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(10, 39, 67, 0.548), rgba(10, 29, 67, 0.678));
+  background: linear-gradient(rgba(10, 39, 67, 0.329), rgba(10, 29, 67, 0.534));
   padding: 80px 5%;
 }
 

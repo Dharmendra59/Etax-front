@@ -14,7 +14,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import Image from "../../assets/logo.svg";
+import Image from "../../assets/wlogo.PNG";
 import "./Header.css";
 import { useUser } from "../../context/user.context";
 
@@ -85,10 +85,8 @@ export default function Header() {
       <nav className={`main-nav ${scrolling ? "scrolling" : ""}`}>
         <Link to="/" className="logo-link" onClick={handleLinkClick}>
           <div className="frontlogo">
-            <img src={Image} alt="logo" width={50} height={40} priority />
-            <h5 className="logoh1">
-              QF<span>S</span>
-            </h5>
+            <img src={Image} alt="logo" width={300} height={90} priority />
+            
           </div>
         </Link>
 
