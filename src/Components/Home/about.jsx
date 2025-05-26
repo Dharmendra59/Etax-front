@@ -9,7 +9,7 @@ export default function About() {
         <div className="about-image-wrapper">
           <div className="experience-badge">
             <span className="number">30</span>
-            <span className="text">Years Of<br />Experience</span>
+            <span className="textex">Years Of<br />Experience</span>
           </div>
           <div className="image-container">
             {/* <Img
@@ -28,7 +28,7 @@ export default function About() {
           <span className="section-label">About Us</span>
           <h2 className="section-title">
           We Offer Popular Plans for{' '}
-            <span className="highlight">Finance & Tax</span>.
+            <span className="highligh">Finance & Tax</span>.
           </h2>
           <p className="section-description">
             There are many variations of passages available but the majority have
