@@ -17,7 +17,7 @@ const TeamSection = () => {
       name: "Amit Gupta",
       role: "CA",
       image: "/placeholder.svg?height=300&width=300",
-      bio: "Sarah has over 15 years of experience in software development and business leadership.",
+      bio: "Sarah has over 10 years of experience in software development and business leadership.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
