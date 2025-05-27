@@ -3,7 +3,7 @@ import React from 'react';
 import { useUser } from '../context/user.context';
 import { useNavigate } from 'react-router-dom';
 
-const AdminProfile = () => {
+const Profile = () => {
   const { user, logout } = useUser();
   const navigate = useNavigate();
   const handleClick = () => {
@@ -24,7 +24,7 @@ const AdminProfile = () => {
           )}
         </div> */}
 
-        <h2 className="admin-profile__title">Admin Profile</h2>
+        <h2 className="admin-profile__title">Profile</h2>
 
         <div className="admin-profile__info">
           <p><strong>Role:</strong> {user.role || 'Administrator'}</p>
@@ -43,4 +43,4 @@ const AdminProfile = () => {
   );
 };
 
-export default AdminProfile;
+export default Profile;

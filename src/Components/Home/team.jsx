@@ -6,6 +6,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa"
 import "./team.css"
+import Image from "../../assets/mainimg.PNG"
 
 const TeamSection = () => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -16,7 +17,8 @@ const TeamSection = () => {
       id: 1,
       name: "Amit Gupta",
       role: "CA",
-      image: "/placeholder.svg?height=300&width=300",
+      // image: "../../assets/mainimg.PNG",
+      image: {Image},
       bio: "Sarah has over 10 years of experience in software development and business leadership.",
       socials: {
         linkedin: "https://linkedin.com",
@@ -246,7 +248,8 @@ const TeamSection = () => {
           {selectedMembers.map((member) => (
             <div className="team-card" key={member.id}>
               <div className="member-image-container">
-                <img src={member.image || "/placeholder.svg"} alt={member.name} className="member-image" />
+                <img src={Image} alt={member.name} className="member-image" />
+                {/* <img src={member.image || "/placeholder.svg"} alt={member.name} className="member-image" /> */}
                 <div className="member-socials">
                   <a href={member.socials.linkedin} aria-label="LinkedIn"><FaLinkedin /></a>
                   <a href={member.socials.twitter} aria-label="Twitter"><FaTwitter /></a>

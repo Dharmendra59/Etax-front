@@ -36,11 +36,12 @@
 }
 
 .welcome-text {
+  /* color: #0c60df; */
   color: #28a745;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   display: block;
 }
 

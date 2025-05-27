@@ -60,7 +60,8 @@ export default function Hero() {
         </div>
 
         <div className="hero-content">
-          <span className="welcome-text">WELCOME TO QUICK FINANCIAL SERVICES !</span>
+          <span className="welcome-text">IT'S TIME TO FILE YOUR ITR !</span>
+          {/* <span className="welcome-text">WELCOME TO QUICK FINANCIAL SERVICES !</span> */}
           <h5 className="heroh1">
             Providing Best
             <br />
