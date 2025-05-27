@@ -86,12 +86,12 @@ export default function Hero() {
           </div>
           <div className="sv-card">
             <div className="icon-circl"><FaShieldAlt /></div>
-            <h3>Tax Consultancy</h3>
+            <h3>Audit Report</h3>
             <p>Variations of Lorem Ipsum available.</p>
           </div>
           <div className="sv-card">
             <div className="icon-circl"><FaShieldAlt /></div>
-            <h3>Tax Consultancy</h3>
+            <h3>Insurance & Tax</h3>
             <p>Variations of Lorem Ipsum available.</p>
           </div>
         </div>
