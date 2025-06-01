@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaUser, FaGraduationCap, FaEdit, FaSignOutAlt, FaChevronDown } from 'react-icons/fa';
+import { FaUser, FaFile, FaEdit, FaSignOutAlt, FaChevronDown } from 'react-icons/fa';
 import { useUser } from '../context/user.context';
 import { useNavigate } from 'react-router-dom';
 import './Profile.css';  // Yaha aap apni AdminProfile.css ka use kar sakte hain
@@ -11,7 +11,7 @@ const Profile = () => {
   const [selectedOccupation, setSelectedOccupation] = useState(user.occupation || "Student");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const occupationOptions = ["Student", "Working Professional", "Intern", "Freelancer"];
+  const occupationOptions = ["Charterd Accountant","Student", "Working Professional", "Intern", "Freelancer"];
 
   const handleOccupationChange = (occupation) => {
     setSelectedOccupation(occupation);
@@ -35,8 +35,8 @@ const Profile = () => {
             <span>Personal Details</span>
           </div>
           <div className="nav-item">
-            <FaGraduationCap className="nav-icon" />
-            <span>Enrolled Courses</span>
+            <FaFile className="nav-icon" />
+            <span>Filing Details</span>
           </div>
         </nav>
       </div>
