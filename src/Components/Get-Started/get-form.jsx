@@ -117,7 +117,7 @@ export default function ContactForm() {
                     onChange={(e) => setFile(e.target.files[0])}
                     accept="image/*, .pdf, .doc, .docx"
                   />
-                  <span className="file-name">{file ? file.name : "Select File"}</span>
+                  <span className="file-name">{file ? file.name : "Select Image"}</span>
                 </label>
               </div>
 
