@@ -1,240 +1,156 @@
-import React, { useState } from "react"
-import {
-  FaLinkedin,
-  FaTwitter,
-  FaGithub,
-  FaEnvelope,
-} from "react-icons/fa"
-import "./team.css"
-import Image from "../../assets/mainimg.PNG"
+import React, { useState } from "react";
+import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
+import "./team.css";
+
+// Import all images dynamically from assets/team folder
+const images = import.meta.glob('../../assets/team/*.{jpg,jpeg,png,webp,gif,svg}', { eager: true, import: 'default' });
+
+const importImage = (name) => {
+  return images[`../../assets/team/${name}.jpg`] ||
+         images[`../../assets/team/${name}.jpeg`] ||
+         images[`../../assets/team/${name}.png`] ||
+         images[`../../assets/team/${name}.webp`] ||
+         images[`../../assets/team/${name}.gif`] ||
+         images[`../../assets/team/${name}.svg`] ||
+         "/placeholder.svg"; // fallback if not found
+};
 
 const TeamSection = () => {
-  const [currentPage, setCurrentPage] = useState(1)
-  const membersPerPage = 6
+  const [currentPage, setCurrentPage] = useState(1);
+  const membersPerPage = 6;
 
   const teamMembers = [
     {
       id: 1,
       name: "Amit Gupta",
       role: "CA",
-      // image: "../../assets/mainimg.PNG",
-      image: {Image},
-      bio: "Sarah has over 10 years of experience in software development and business leadership.",
+      image: importImage('amit'),  // Replace with correct filename
+      bio: "Amit has over 10 years of experience in financial strategy and planning.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
         github: "https://github.com",
-        email: "mailto:sarah@example.com",
+        email: "mailto:amit@example.com",
       },
     },
     {
       id: 2,
       name: "Shivangi Jaiswal",
       role: "CA",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Michael is an expert in cloud architecture and leads our technical strategy.",
+      image: importImage('shivangi'),  // Replace with correct filename
+      bio: "Shivangi is an expert in corporate tax and compliance.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
         github: "https://github.com",
-        email: "mailto:michael@example.com",
+        email: "mailto:shivangi@example.com",
       },
     },
     {
       id: 3,
       name: "Ali Nawaz",
       role: "Advisor",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Priya brings creative vision to our products with her background in UX/UI design.",
+      image: importImage('ali'),
+      bio: "Ali brings a wealth of experience in international business development.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
         github: "https://github.com",
-        email: "mailto:priya@example.com",
+        email: "mailto:ali@example.com",
       },
     },
     {
       id: 4,
       name: "Aun Abbas",
       role: "Advisor",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "James specializes in frontend development and has contributed to numerous open-source projects.",
+      image: importImage('aun'),
+      bio: "Aun is an expert in legal compliance and governance.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
         github: "https://github.com",
-        email: "mailto:james@example.com",
+        email: "mailto:aun@example.com",
       },
     },
     {
-      id: 5,
-      name: "Salil Gautam",
-      role: "Acc",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Elena drives our marketing strategy with her innovative approach to digital marketing.",
-      socials: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        github: "https://github.com",
-        email: "mailto:elena@example.com",
-      },
-    },
-    {
-      id: 6,
-      name: "Nancy Gupta",
+      id: 4,
+      name: "Aun Abbas",
       role: "Advisor",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "David oversees product development and ensures we deliver exceptional user experiences.",
+      image: importImage('aun'),
+      bio: "Aun is an expert in legal compliance and governance.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
         github: "https://github.com",
-        email: "mailto:david@example.com",
+        email: "mailto:aun@example.com",
       },
     },
     {
-      id: 7,
-      name: "Deepika Rajpoot",
+      id: 4,
+      name: "Aun Abbas",
       role: "Advisor",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Nina ensures all products meet our high-quality standards through thorough testing.",
+      image: importImage('aun'),
+      bio: "Aun is an expert in legal compliance and governance.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
         github: "https://github.com",
-        email: "mailto:nina@example.com",
+        email: "mailto:aun@example.com",
       },
     },
     {
-      id: 8,
-      name: "Shahana Mansuri",
+      id: 4,
+      name: "Aun Abbas",
       role: "Advisor",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Alex maintains smooth deployments and robust infrastructure.",
+      image: importImage('aun'),
+      bio: "Aun is an expert in legal compliance and governance.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
         github: "https://github.com",
-        email: "mailto:alex@example.com",
+        email: "mailto:aun@example.com",
       },
     },
     {
-      id: 9,
-      name: "Abhishek Gupta",
-      role: "Acc",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Alex maintains smooth deployments and robust infrastructure.",
+      id: 4,
+      name: "Aun Abbas",
+      role: "Advisor",
+      image: importImage('aun'),
+      bio: "Aun is an expert in legal compliance and governance.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
         github: "https://github.com",
-        email: "mailto:alex@example.com",
+        email: "mailto:aun@example.com",
       },
     },
     {
-      id: 10,
-      name: "Khizra",
-      role: "Acc",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Alex maintains smooth deployments and robust infrastructure.",
+      id: 4,
+      name: "Aun Abbas",
+      role: "Advisor",
+      image: importImage('aun'),
+      bio: "Aun is an expert in legal compliance and governance.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
         github: "https://github.com",
-        email: "mailto:alex@example.com",
+        email: "mailto:aun@example.com",
       },
     },
-    {
-      id: 11,
-      name: "Sakshi",
-      role: "Acc",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Alex maintains smooth deployments and robust infrastructure.",
-      socials: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        github: "https://github.com",
-        email: "mailto:alex@example.com",
-      },
-    },
-    {
-      id: 12,
-      name: "Nitin Gupta",
-      role: "Acc",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Alex maintains smooth deployments and robust infrastructure.",
-      socials: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        github: "https://github.com",
-        email: "mailto:alex@example.com",
-      },
-    },
-    {
-      id: 13,
-      name: "Abhishek Singh",
-      role: "Acc",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Alex maintains smooth deployments and robust infrastructure.",
-      socials: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        github: "https://github.com",
-        email: "mailto:alex@example.com",
-      },
-    },
-    {
-      id: 14,
-      name: "Kripa Shankar",
-      role: "Acc",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Alex maintains smooth deployments and robust infrastructure.",
-      socials: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        github: "https://github.com",
-        email: "mailto:alex@example.com",
-      },
-    },
-    {
-      id: 15,
-      name: "Neeraj Tiwari",
-      role: "Acc",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Alex maintains smooth deployments and robust infrastructure.",
-      socials: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        github: "https://github.com",
-        email: "mailto:alex@example.com",
-      },
-    },
-    {
-      id: 16,
-      name: "Ajay Kumar Tiwari",
-      role: "Acc",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Alex maintains smooth deployments and robust infrastructure.",
-      socials: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        github: "https://github.com",
-        email: "mailto:alex@example.com",
-      },
-    },
-  ]
+    // Add more members as needed...
+  ];
 
-  const totalPages = Math.ceil(teamMembers.length / membersPerPage)
-  const startIndex = (currentPage - 1) * membersPerPage
-  const selectedMembers = teamMembers.slice(startIndex, startIndex + membersPerPage)
+  const totalPages = Math.ceil(teamMembers.length / membersPerPage);
+  const startIndex = (currentPage - 1) * membersPerPage;
+  const selectedMembers = teamMembers.slice(startIndex, startIndex + membersPerPage);
 
   const handlePrev = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1)
-  }
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
 
   const handleNext = () => {
-    if (currentPage < totalPages) setCurrentPage(currentPage + 1)
-  }
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
 
   return (
     <section className="team-section">
@@ -248,12 +164,11 @@ const TeamSection = () => {
           {selectedMembers.map((member) => (
             <div className="team-card" key={member.id}>
               <div className="member-image-container">
-                <img src={Image} alt={member.name} className="member-image" />
-                {/* <img src={member.image || "/placeholder.svg"} alt={member.name} className="member-image" /> */}
+                <img src={member.image} alt={member.name} className="member-image" />
                 <div className="member-socials">
-                  <a href={member.socials.linkedin} aria-label="LinkedIn"><FaLinkedin /></a>
-                  <a href={member.socials.twitter} aria-label="Twitter"><FaTwitter /></a>
-                  <a href={member.socials.github} aria-label="GitHub"><FaGithub /></a>
+                  <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+                  <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
+                  <a href={member.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
                   <a href={member.socials.email} aria-label="Email"><FaEnvelope /></a>
                 </div>
               </div>
@@ -273,7 +188,7 @@ const TeamSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default TeamSection
+export default TeamSection;
