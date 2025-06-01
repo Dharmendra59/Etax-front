@@ -22,7 +22,7 @@ export default function ContactForm() {
       formData.append('file', file);
 
       try {
-        const response = await fetch('http://localhost:3000/file/file_submit', {
+        const response = await fetch('https://etax-back-2.onrender.com/file/file_submit', {
           method: 'POST',
           body: formData,
         });
