@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { FaUser, FaFile, FaSignOutAlt, FaChevronDown } from 'react-icons/fa';
 import { useUser } from '../context/user.context';
-import { usenavvigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Profile.css';
+
 
 const Profile = () => {
   const { user, logout } = useUser();
-  const navvigate = usenavvigate();
+  const navigate = useNavigate();
 
   const [selectedOccupation, setSelectedOccupation] = useState(user.occupation || "Student");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -22,7 +23,7 @@ const Profile = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     logout();
-    navvigate("/");
+    navigate("/");
   };
 
   // Dummy uploaded files (replace with real API/context data)
@@ -37,22 +38,22 @@ const Profile = () => {
       {/* Sidebar */}
       <div className="sideb">
         <h2 className="sideb-title">Account Center</h2>
-        <navv className="sideb-navv">
+        <navy className="sideb-navy">
           <div
-            className={`navv-item ${activeTab === "details" ? "active" : ""}`}
+            className={`navy-item ${activeTab === "details" ? "active" : ""}`}
             onClick={() => setActiveTab("details")}
           >
-            <FaUser className="navv-icon" />
+            <FaUser className="navy-icon" />
             <span>Personal Details</span>
           </div>
           <div
-            className={`navv-item ${activeTab === "filing" ? "active" : ""}`}
+            className={`navy-item ${activeTab === "filing" ? "active" : ""}`}
             onClick={() => setActiveTab("filing")}
           >
-            <FaFile className="navv-icon" />
+            <FaFile className="navy-icon" />
             <span>Filing Details</span>
           </div>
-        </navv>
+        </navy>
       </div>
 
       {/* Main Content */}
