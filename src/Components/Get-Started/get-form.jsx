@@ -22,7 +22,7 @@ export default function ContactForm() {
       formData.append('file', file);
 
       try {
-        const response = await fetch('https://etax-back-2.onrender.com/file/file_submit', {
+        const response = await fetch('http://localhost:3000/file/file_submit', {
           method: 'POST',
           body: formData,
         });
@@ -30,7 +30,16 @@ export default function ContactForm() {
         const result = await response.json();
 
         if (response.ok) {
-          handleSuccess("File Uploaded Successfully");
+          const uploadedFileUrl = result?.url || ''; // Replace 'url' with your backend key
+          if (uploadedFileUrl) {
+            // Directly open the uploaded file in a new tab (view mode)
+            window.open(uploadedFileUrl, '_blank');
+            handleSuccess("File Uploaded & Viewable!");
+          } else {
+            handleError('File uploaded, but URL not found.');
+          }
+
+          // Reset form fields
           setName('');
           setMobile('');
           setEmail('');
@@ -42,7 +51,7 @@ export default function ContactForm() {
       } catch (error) {
         handleError('Something went wrong');
       }
-    }
+    };
 
     return (
       <section className="contact-section">

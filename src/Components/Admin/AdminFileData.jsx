@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from "react";
-import { FaSearch, FaTrash, FaEnvelope, FaPhone, FaSortAlphaDown, FaSortAlphaUp,FaFile } from "react-icons/fa";
+import { FaSearch, FaTrash, FaEnvelope, FaPhone, FaSortAlphaDown, FaSortAlphaUp, FaFile } from "react-icons/fa";
 import "./AdminContactUsData.css";
 
 const ContactDataSection = () => {
@@ -58,15 +57,20 @@ const ContactDataSection = () => {
     if (a[sortColumn] > b[sortColumn]) return sortDirection === "asc" ? 1 : -1;
     return 0;
   });
-  const handleDownload = (fileName) => {
-        const fileUrl = `/files/${fileName}`
-        const link = document.createElement('a')
-        link.href = fileUrl
-        link.download = fileName
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-  }
+
+  const handleViewAndDownload = (fileUrl, originalFileName) => {
+    // Open the file in a new tab
+    window.open(fileUrl, '_blank');
+
+    // Create a link for download with original filename
+    const downloadUrl = fileUrl.replace('/upload/', '/upload/fl_attachment/');
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = originalFileName || '';  // Use original filename if available
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="file-data-section">
@@ -89,13 +93,11 @@ const ContactDataSection = () => {
                 Email {sortColumn === "email" && (sortDirection === "asc" ? <FaSortAlphaDown /> : <FaSortAlphaUp />)}
               </th>
               <th onClick={() => handleSort("fileName")}>
-                 File Name{" "}
-                 {sortColumn === "fileName" && (sortDirection === "asc" ? <FaSortAlphaDown /> : <FaSortAlphaUp />)}
+                File Name {sortColumn === "fileName" && (sortDirection === "asc" ? <FaSortAlphaDown /> : <FaSortAlphaUp />)}
               </th>
               <th onClick={() => handleSort("message")}>
                 Message {sortColumn === "message" && (sortDirection === "asc" ? <FaSortAlphaDown /> : <FaSortAlphaUp />)}
               </th>
-              
               <th>Actions</th>
             </tr>
           </thead>
@@ -105,9 +107,8 @@ const ContactDataSection = () => {
                 <td>{item.name}</td>
                 <td>{item.mobile}</td>
                 <td>{item.email}</td>
-                <td>{item.file}</td>
+                <td>{item.fileName || item.file}</td>
                 <td>{item.message}</td>
-                
                 <td>
                   <div className="action-buttons">
                     <button className="delete-btn" onClick={() => handleDelete(item._id)}>
@@ -119,8 +120,8 @@ const ContactDataSection = () => {
                     <a href={`tel:${item.mobile}`} className="contact-btn phone-btn">
                       <FaPhone />
                     </a>
-                    <button className="file-btn" onClick={() => handleDownload(item.file)}>
-                       <FaFile />
+                    <button className="file-btn" onClick={() => handleViewAndDownload(item.file, item.fileName)}>
+                      <FaFile />
                     </button>
                   </div>
                 </td>
@@ -134,5 +135,3 @@ const ContactDataSection = () => {
 };
 
 export default ContactDataSection;
-
-
