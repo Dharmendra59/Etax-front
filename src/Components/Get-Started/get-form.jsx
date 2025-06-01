@@ -30,14 +30,15 @@ export default function ContactForm() {
         const result = await response.json();
 
         if (response.ok) {
-          const uploadedFileUrl = result?.url || ''; // Replace 'url' with your backend key
-          if (uploadedFileUrl) {
+          // const uploadedFileUrl = result?.url || ''; // Replace 'url' with your backend key
+          // if (uploadedFileUrl) {
             // Directly open the uploaded file in a new tab (view mode)
-            window.open(uploadedFileUrl, '_blank');
-            handleSuccess("File Uploaded & Viewable!");
-          } else {
-            handleError('File uploaded, but URL not found.');
-          }
+          //   window.open(uploadedFileUrl, '_blank');
+          //   handleSuccess("File Uploaded & Viewable!");
+          // } else {
+          //   handleError('File uploaded, but URL not found.');
+          // }
+                      handleSuccess("File Uploaded Successfully");
 
           // Reset form fields
           setName('');
