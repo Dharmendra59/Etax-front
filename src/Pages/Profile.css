@@ -24,12 +24,12 @@
   margin-bottom: 10px;
 }
 
-.sideb-nav {
+.sideb-navv {
   display: flex;
   flex-direction: column;
 }
 
-.nav-item {
+.navv-item {
   display: flex;
   align-items: center;
   padding: 10px 0;
@@ -38,11 +38,11 @@
   justify-content: center;
 }
 
-.nav-item.active, .nav-item:hover {
+.navv-item.active, .navv-item:hover {
   color: #0979e9;
 }
 
-.nav-icon {
+.navv-icon {
   margin-right: 10px;
 }
 
@@ -220,7 +220,7 @@
     padding: 10px 0;
   }
 
-  .sideb-nav {
+  .sideb-navv {
     flex-direction: row;
     gap: 20px;
   }
