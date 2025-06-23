@@ -50,7 +50,7 @@ export default function Footer() {
               <img
                 src={Image}
                 alt="QFS Logo"
-                width={300}
+                width={"auto"}
                 height={100}
                 priority
               />
@@ -117,15 +117,18 @@ export default function Footer() {
                   <FaPhone />
                   <div>
                     <strong>Call Us</strong>
-                    <p>7905876982</p>
+                    <p><a href="tel:7905876982" style={{ color: 'inherit', textDecoration: 'none' }}>
+                       7905876982
+                    </a></p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <FaEnvelope />
                   <div>
                     <strong>Mail Us</strong>
-                    <p>itaxshikha7@gmail.com</p>
-                  </div>
+                <a href="mailto:caamitgupta2023@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <p>caamitgupta2023@gmail.com</p>
+                </a>                  </div>
                 </div>
               </div>
             </div>

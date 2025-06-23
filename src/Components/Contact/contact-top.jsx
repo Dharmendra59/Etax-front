@@ -18,23 +18,25 @@ export default function ContactInfo() {
             <FaPhone className="info-icon" />
           </div>
           <h3>Call Us</h3>
-          <p>7905876982</p>
-        </div>
+                    <p><a href="tel:7905876982" style={{ color: 'inherit', textDecoration: 'none' }}>
+                       7905876982
+                    </a></p>        </div>
 
         <div className="info-card">
           <div className="icon-circle">
             <FaEnvelope className="info-icon" />
           </div>
           <h3>Email Us</h3>
-          <p>itaxshikha7@gmail.com</p>
-        </div>
+                <a href="mailto:caamitgupta2023@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <p>caamitgupta2023@gmail.com</p>
+                </a>        </div>
 
         <div className="info-card">
           <div className="icon-circle">
             <FaClock className="info-icon" />
           </div>
           <h3>Open Time</h3>
-          <p>Mon - Sat (10.00AM - 05.30PM)</p>
+          <p>Mon - Sat (11.00AM - 07.00PM)</p>
         </div>
       </div>
     </section>

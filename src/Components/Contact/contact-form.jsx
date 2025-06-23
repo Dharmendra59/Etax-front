@@ -56,7 +56,7 @@ export default function ContactForm() {
           </p>
 
           <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-row">
+            <div className="form-roww">
               <div className="input-grup">
                 <FaUser className="input-icon" />
                 {/* <input type="text" placeholder="Your Name" required /> */}

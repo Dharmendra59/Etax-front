@@ -8,7 +8,7 @@ export default function About() {
       <div className="about-container">
         <div className="about-image-wrapper">
           <div className="experience-badge">
-            <span className="number">30</span>
+            <span className="number">10</span>
             <span className="text">Years Of<br />Experience</span>
           </div>
           <div className="image-container">

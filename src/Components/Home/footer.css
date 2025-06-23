@@ -24,9 +24,14 @@
 .footer-logo {
   display: flex;
   margin-bottom: 24px;
-  text-decoration: none;
+  /* text-decoration: none;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+}
+.footer-logo a {
+  text-decoration: none;
+  color: white;
+
 }
 .footer-logo h1 {
   font-size: 2.6rem;

@@ -45,14 +45,40 @@ export default function Header() {
       {/* Top Bar */}
       <div className={`top-bar ${scrolling ? "hidden" : ""}`}>
         <div className="cont-info">
-          <a href="mailto:info@example.com">
-            <FaEnvelope /> itaxshikha7@gmail.com
-          </a>
+          <div className="email-ticker">
+            <div className="ticker-track">
+              {/* Repeat same items for seamless loop */}
+              <div className="ticker-item">
+                <a href="mailto:caamitgupta2016@gmail.com">
+                  <FaEnvelope /> caamitgupta2016@gmail.com
+                </a>
+              </div>
+              <div className="ticker-item">
+                <a href="mailto:caamitgupta2023@gmail.com">
+                  <FaEnvelope /> caamitgupta2023@gmail.com
+                </a>
+              </div>
+              {/* Duplicate for smooth infinite effect */}
+              <div className="ticker-item">
+                <a href="mailto:caamitgupta2016@gmail.com">
+                  <FaEnvelope /> caamitgupta2016@gmail.com
+                </a>
+              </div>
+              <div className="ticker-item">
+                <a href="mailto:caamitgupta2023@gmail.com">
+                  <FaEnvelope /> caamitgupta2023@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
           <a href="tel:7905876982">
             <FaPhone /> 7905876982
           </a>
           <span>
-            <FaClock /> Sun - Fri (08AM - 10PM)
+            <FaClock /> Sun - Fri (11AM - 7PM)
           </span>
         </div>
         <div className="right-section">
@@ -70,7 +96,7 @@ export default function Header() {
       <nav className={`main-nav ${scrolling ? "scrolling" : ""}`}>
         <Link to="/" className="logo-link" onClick={handleLinkClick}>
           <div className="frontlogo">
-            <img src={Image} alt="logo" width={300} height={90} />
+            <img src={Image} alt="logo" width={"auto"} height={100} />
           </div>
         </Link>
 
