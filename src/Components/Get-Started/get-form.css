@@ -62,7 +62,7 @@
   gap: 20px;
 }
 
-.input-grup {
+.input-grupe {
   position: relative;
 }
 
@@ -83,8 +83,8 @@
   font-size: 16px;
 }
 
-.input-grup input,
-.input-grup textarea {
+.input-grupe input,
+.input-grupe textarea {
   width: 100%;
   padding: 12px 16px 12px 48px;
   border: none;
@@ -95,18 +95,18 @@
   transition: border-color 0.3s ease;
 }
 
-.input-grup textarea {
+.input-grupe textarea {
   resize: vertical;
   min-height: 120px;
 }
 
-.input-grup input:focus,
-.input-grup textarea:focus {
+.input-grupe input:focus,
+.input-grupe textarea:focus {
   outline: none;
   border-color: #0dcaf0;
 }
 
-.input-grup textarea ~ .input-icon {
+.input-grupe textarea ~ .input-icon {
   top: 24px;
   transform: none;
 }
@@ -185,7 +185,7 @@
 /* Add the following CSS to your get-form.css */
 
 /* Style the file input section */
-.file-input-grup {
+.file-input-grupe {
   position: relative;
 }
 

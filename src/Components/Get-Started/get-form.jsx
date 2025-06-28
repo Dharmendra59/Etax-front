@@ -1,139 +1,161 @@
 import { useState } from "react";
-import { FaUser, FaEnvelope, FaPhone, FaComments, FaPaperPlane, FaFileUpload } from "react-icons/fa";
+import {
+  FaUser,
+  FaEnvelope,
+  FaPhone,
+  FaComments,
+  FaPaperPlane,
+  FaFileUpload,
+} from "react-icons/fa";
 import "./get-form.css";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "../../utils";
+import Loader from "../../Components/Get-Started/loder"; // ✅ Import loader
 
 export default function ContactForm() {
-    const [name, setName] = useState('');
-    const [mobile, setMobile] = useState('');
-    const [email, setEmail] = useState('');
-    const [file, setFile] = useState(null);
-    const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [email, setEmail] = useState("");
+  const [file, setFile] = useState(null);
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false); // ✅ Loading state
 
-    const handleSubmit = async (e) => {
-      e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true); // Start loader
 
-      const formData = new FormData();
-      formData.append('name', name);
-      formData.append('mobile', mobile);
-      formData.append('email', email);
-      formData.append('message', message);
-      formData.append('file', file);
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("mobile", mobile);
+    formData.append("email", email);
+    formData.append("message", message);
+    formData.append("file", file);
 
-      try {
-        const response = await fetch('https://etax-back-2.onrender.com/file/file_submit', {
-          method: 'POST',
+    try {
+      const response = await fetch(
+        "https://etax-back-2.onrender.com/file/file_submit",
+        {
+          method: "POST",
           body: formData,
-        });
-
-        const result = await response.json();
-
-        if (response.ok) {
-          // const uploadedFileUrl = result?.url || ''; // Replace 'url' with your backend key
-          // if (uploadedFileUrl) {
-            // Directly open the uploaded file in a new tab (view mode)
-          //   window.open(uploadedFileUrl, '_blank');
-          //   handleSuccess("File Uploaded & Viewable!");
-          // } else {
-          //   handleError('File uploaded, but URL not found.');
-          // }
-                      handleSuccess("File Uploaded Successfully");
-
-          // Reset form fields
-          setName('');
-          setMobile('');
-          setEmail('');
-          setMessage('');
-          setFile(null);
-        } else {
-          handleError(result.msg || 'Something went wrong');
         }
-      } catch (error) {
-        handleError('Something went wrong');
+      );
+
+      const result = await response.json();
+
+      if (response.ok) {
+        handleSuccess("File Uploaded Successfully");
+
+        // Reset fields
+        setName("");
+        setMobile("");
+        setEmail("");
+        setMessage("");
+        setFile(null);
+      } else {
+        handleError(result.msg || "Something went wrong");
       }
-    };
+    } catch (error) {
+      handleError("Something went wrong");
+    } finally {
+      setLoading(false); // Stop loader
+    }
+  };
 
-    return (
-      <section className="contact-section">
-        <div className="contact-cont">
-          <div className="image-section">
-            <img
-              src="https://st.depositphotos.com/1594308/2118/i/450/depositphotos_21186915-stock-photo-business-partners-discussing-documents.jpg"
-              alt="Team meeting"
-              className="contact-image"
-            />
-          </div>
+  return loading ? (
+    <Loader />
+  ) : (
+    <section className="contact-section">
+      <div className="contact-cont">
+        <div className="image-section">
+          <img
+            src="https://st.depositphotos.com/1594308/2118/i/450/depositphotos_21186915-stock-photo-business-partners-discussing-documents.jpg"
+            alt="Team meeting"
+            className="contact-image"
+          />
+        </div>
 
-          <div className="form-section">
-            <h2>Easy Tax</h2>
-            <p>
-              We are dedicated to going that extra mile to create the perfect tailored plan to serve you better
-            </p>
+        <div className="form-section">
+          <h2>Easy Tax</h2>
+          <p>
+            We are dedicated to going that extra mile to create the perfect
+            tailored plan to serve you better
+          </p>
 
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="input-grup">
-                  <FaUser className="input-icon" />
-                  <input type="text" placeholder='Your Name'
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-                </div>
-
-                <div className="input-grup">
-                  <FaPhone className="input-icon" />
-                  <input
-                    type="tel"
-                    placeholder="Mobile"
-                    value={mobile}
-                    onChange={(e) => setMobile(e.target.value)}
-                    required
-                    pattern="[0-9]{10}"
-                    title="Please enter a valid 10-digit mobile number"
-                    maxLength={10}
-                  />
-                </div>
-              </div>
-
-              <div className="input-grup">
-                <FaEnvelope className="input-icon" />
-                <input type="email" placeholder='Your Email'
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-row">
+              <div className="input-grupe">
+                <FaUser className="input-icon" />
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   required
                 />
               </div>
 
-              <div className="input-grup file-input-grup">
-                <label className="file-label" htmlFor="file-upload">
-                  <FaFileUpload className="file-icon" />
-                  <input
-                    type="file"
-                    id="file-upload"
-                    className="file-input"
-                    required
-                    onChange={(e) => setFile(e.target.files[0])}
-                    accept="image/*, .pdf, .doc, .docx"
-                  />
-                  <span className="file-name">{file ? file.name : "Select Image"}</span>
-                </label>
+              <div className="input-grupe">
+                <FaPhone className="input-icon" />
+                <input
+                  type="tel"
+                  placeholder="Mobile"
+                  value={mobile}
+                  onChange={(e) => setMobile(e.target.value)}
+                  required
+                  pattern="[0-9]{10}"
+                  title="Please enter a valid 10-digit mobile number"
+                  maxLength={10}
+                />
               </div>
+            </div>
 
-              <div className="input-grup">
-                <FaComments className="input-icon comments-icon" />
-                <textarea placeholder="Write Your Message" required rows={6} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-              </div>
+            <div className="input-grup">
+              <FaEnvelope className="input-icon" />
+              <input
+                type="email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
 
-              <button type="submit" className="submit-btn">
-                <span>Submit</span>
-                <FaPaperPlane className="send-icon" />
-              </button>
-            </form>
-            <ToastContainer />
-          </div>
+            <div className="input-grup file-input-grup">
+              <label className="file-label" htmlFor="file-upload">
+                <FaFileUpload className="file-icon" />
+                <input
+                  type="file"
+                  id="file-upload"
+                  className="file-input"
+                  required
+                  onChange={(e) => setFile(e.target.files[0])}
+                  accept="image/*, .pdf, .doc, .docx"
+                />
+                <span className="file-name">
+                  {file ? file.name : "Select File"}
+                </span>
+              </label>
+            </div>
+
+            <div className="input-grup">
+              <FaComments className="input-icon comments-icon" />
+              <textarea
+                placeholder="Write Your Message"
+                required
+                rows={6}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+            </div>
+
+            <button type="submit" className="submit-btn">
+              <span>Submit</span>
+              <FaPaperPlane className="send-icon" />
+            </button>
+          </form>
+          <ToastContainer />
         </div>
-      </section>
-    );
+      </div>
+    </section>
+  );
 }

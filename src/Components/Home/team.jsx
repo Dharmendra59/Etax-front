@@ -64,7 +64,7 @@ const TeamSection = () => {
       name: "Aun Abbas",
       role: "Advisor",
       image: importImage('aun'),
-      bio: "Aun is an expert in legal compliance and governance.",
+      bio: "Income Tax filing, GST filing, apeal and GST related issues.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",

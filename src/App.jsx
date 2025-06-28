@@ -22,10 +22,12 @@ import Profile from "./Pages/Profile";
 import Images from './Pages/Images';
 import Videos_section from './Pages/VideoSec';
 import NotFound from "./Components/Common/notFound";
-import RequireAuth from "./Components/Common/RequireAuth"; // 👈 Import added
+import RequireAuth from "./Components/Common/RequireAuth";
+import Loader from "./Components/Get-Started/loder"; // ✅ Import Loader
 
 const App = () => {
   const user = useUser();
+  const [loading, setLoading] = React.useState(true);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -38,63 +40,66 @@ const App = () => {
       .get("https://etax-back-1.onrender.com/auth/checkauth")
       .then((response) => {
         user.login(response.data.user);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error:", error.response?.data || error.message);
+        setLoading(false);
       });
   }, []);
 
   return (
     <div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <CheckAuth isAuthenticated={user.isAuthenticated} user={user.user}>
-              <FrontLayout />
-            </CheckAuth>
-          }
-        >
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="services" element={<Services />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="login" element={<LogIn />} />
-          <Route path="password" element={<Password />} />
-          <Route path="register" element={<Register />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="profile" element={user.isAuthenticated ? <Profile /> : <NotFound />} />
-          
-          {/* 👇 Get Started Protected Route */}
+      {loading ? (
+        <Loader />
+      ) : (
+        <Routes>
           <Route
-            path="get-started"
+            path="/"
             element={
-              <RequireAuth>
-                <Get />
-              </RequireAuth>
+              <CheckAuth isAuthenticated={user.isAuthenticated} user={user.user}>
+                <FrontLayout />
+              </CheckAuth>
             }
-          />
+          >
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="services" element={<Services />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="login" element={<LogIn />} />
+            <Route path="password" element={<Password />} />
+            <Route path="register" element={<Register />} />
+            <Route path="blogs" element={<Blogs />} />
+            <Route path="profile" element={user.isAuthenticated ? <Profile /> : <NotFound />} />
+            <Route
+              path="get-started"
+              element={
+                <RequireAuth>
+                  <Get />
+                </RequireAuth>
+              }
+            />
+            <Route path="images" element={<Images />} />
+            <Route path="videos" element={<Videos_section />} />
+          </Route>
 
-          <Route path="images" element={<Images />} />
-          <Route path="videos" element={<Videos_section />} />
-        </Route>
+          <Route
+            path="/admin"
+            element={
+              <CheckAuth isAuthenticated={user.isAuthenticated} user={user.user}>
+                <AdminLayout />
+              </CheckAuth>
+            }
+          >
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="file-data" element={<FileData />} />
+            <Route path="contact-data" element={<ContactData />} />
+            <Route path="admin-profile" element={<AdminProfile />} />
+          </Route>
 
-        <Route
-          path="/admin"
-          element={
-            <CheckAuth isAuthenticated={user.isAuthenticated} user={user.user}>
-              <AdminLayout />
-            </CheckAuth>
-          }
-        >
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="file-data" element={<FileData />} />
-          <Route path="contact-data" element={<ContactData />} />
-          <Route path="admin-profile" element={<AdminProfile />} />
-        </Route>
-
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      )}
     </div>
   );
 };

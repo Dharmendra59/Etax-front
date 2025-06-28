@@ -107,23 +107,23 @@ export default function Hero() {
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
           {/* </div> */}
         </Link>
-          <div className="sv-card">
+          {/* <div className="sv-card">
             <div className="icon-circl">
               <FaUserTie />
             </div>
             <h3>Financing Services</h3>
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
-          </div>
+          </div> */}
 
           
 
-          <div className="sv-card">
+          {/* <div className="sv-card">
             <div className="icon-circl">
               <FaChartLine />
             </div>
             <h3>E-Invoicing & E-Way Bills</h3>
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
-          </div>
+          </div> */}
 
           <div className="sv-card">
             <div className="icon-circl">
@@ -136,7 +136,7 @@ export default function Hero() {
             <div className="icon-circl">
               <FaShieldAlt />
             </div>
-            <h3>Tax Consultancy</h3>
+            <h3>Tax Consultancy & Other Services</h3>
             <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
           </div>
           
