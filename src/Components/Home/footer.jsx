@@ -46,7 +46,7 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-main">
           <div className="footer-about">
-            <Link href="/" className="footer-logo">
+            <Link to="/" className="footer-logo">
               <img
                 src={Image}
                 alt="QFS Logo"
@@ -82,24 +82,24 @@ export default function Footer() {
             <div className="footer-section">
               <h3>Company</h3>
               <ul>
-                <li><Link href="/about">About Us</Link></li>
-                <li><Link href="/news">Update News</Link></li>
-                <li><Link href="/contact">Contact Us</Link></li>
-                <li><Link href="/testimonials">Testimonials</Link></li>
-                <li><Link href="/terms">Terms Of Service</Link></li>
-                <li><Link href="/privacy">Privacy policy</Link></li>
+                <li><Link to="/about">About Us</Link></li>
+                {/* <li><Link href="/news">Update News</Link></li> */}
+                <li><Link to="/contact">Contact Us</Link></li>
+                <li><Link to="/about">Testimonials</Link></li>
+                <li><Link to="/terms">Terms Of Service</Link></li>
+                <li><Link to="/privacy">Privacy policy</Link></li>
               </ul>
             </div>
 
             <div className="footer-section">
               <h3>Services</h3>
               <ul>
-                <li><Link href="/services/tax-planning">Tax Planning</Link></li>
-                <li><Link href="/services/personal-tax">Personal Tax</Link></li>
-                <li><Link href="/services/insurance-tax">Insurance Tax</Link></li>
-                <li><Link href="/services/tax-audit">Tax Audit Support</Link></li>
-                <li><Link href="/services/corporate-tax">Corporate Tax</Link></li>
-                <li><Link href="/services/tax-advisory">Tax Advisory</Link></li>
+                <li><Link to="/services">Tax Planning</Link></li>
+                <li><Link to="/services">Personal Tax</Link></li>
+                <li><Link to="/services">Insurance Tax</Link></li>
+                <li><Link to="/services">Tax Audit Support</Link></li>
+                <li><Link to="/services">Corporate Tax</Link></li>
+                <li><Link to="/services">Tax Advisory</Link></li>
               </ul>
             </div>
 

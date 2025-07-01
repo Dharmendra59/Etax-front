@@ -24,6 +24,8 @@ import Videos_section from './Pages/VideoSec';
 import NotFound from "./Components/Common/notFound";
 import RequireAuth from "./Components/Common/RequireAuth";
 import Loader from "./Components/Get-Started/loder"; // ✅ Import Loader
+import Terms from "./Components/Home/terms"
+import Privacy from "./Components/Home/terms"
 
 const App = () => {
   const user = useUser();
@@ -70,6 +72,8 @@ const App = () => {
             <Route path="password" element={<Password />} />
             <Route path="register" element={<Register />} />
             <Route path="blogs" element={<Blogs />} />
+            <Route path="terms" element={<Terms />} />
+            <Route path="privacy" element={<Privacy />} />
             <Route path="profile" element={user.isAuthenticated ? <Profile /> : <NotFound />} />
             <Route
               path="get-started"

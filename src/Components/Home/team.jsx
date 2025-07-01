@@ -51,7 +51,7 @@ const TeamSection = () => {
       name: "Ali Nawaz",
       role: "Advisor",
       image: importImage('ali'),
-      bio: "Ali brings a wealth of experience in international business development.",
+      bio: "Income Tax filing, GST filing, appeal and GST related issues.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
@@ -64,7 +64,7 @@ const TeamSection = () => {
       name: "Aun Abbas",
       role: "Advisor",
       image: importImage('aun'),
-      bio: "Income Tax filing, GST filing, apeal and GST related issues.",
+      bio: "Income Tax filing, GST filing, appeal and GST related issues.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
@@ -77,7 +77,7 @@ const TeamSection = () => {
       name: "Salil Gautam",
       role: "Acc",
       image: importImage('salil'),
-      bio: "Salil Gautam is an expert in legal compliance and governance.",
+      bio: "ITR Written Filing, Finalization of books of accounts, and GST filing.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
@@ -90,7 +90,7 @@ const TeamSection = () => {
       name: "Nancy Gupta",
       role: "Advisor",
       image: importImage('nancy'),
-      bio: "Nancy Gupta is an expert in legal compliance and governance.",
+      bio: "ITR Written Filing, Finalization of books of accounts, and GST filing.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
@@ -103,7 +103,7 @@ const TeamSection = () => {
       name: "Deepika Rajpoot",
       role: "Advisor",
       image: importImage('deepika'),
-      bio: "Deepika Rajpoot is an expert in legal compliance and governance.",
+      bio: "Administrative Work, Client Management",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
@@ -116,7 +116,7 @@ const TeamSection = () => {
       name: "Shahana Mansuri",
       role: "Advisor",
       image: importImage('nancy'),
-      bio: "Aun is an expert in legal compliance and governance.",
+      bio: "Finalization of books of accounts, and GST filing & accounts booking.",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
