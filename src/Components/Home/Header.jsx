@@ -84,9 +84,27 @@ export default function Header() {
         <div className="right-section">
           <div className="social-links">
             <span>Follow Us:</span>
-            <Link to="https://www.facebook.com/share/19xZii9owS/"><FaFacebookF /></Link>
-            <Link to="#"><FaTwitter /></Link>
-            <Link to="https://www.instagram.com/quickfinancial.services"><FaInstagram /></Link>
+  <a 
+    href="https://www.facebook.com/share/19xZii9owS/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <FaFacebookF />
+  </a>
+  <a 
+    href="#" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <FaTwitter />
+  </a>
+  <a 
+    href="https://www.instagram.com/quickfinancial.services" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <FaInstagram />
+  </a>
             {/* <a href="#"><FaLinkedinIn /></a> */}
           </div>
         </div>
