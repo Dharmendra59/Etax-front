@@ -13,37 +13,37 @@ const services = [
   {
     icon: <FaCalculator />,
     title: "Financial Planning",
-    description: "There are many variation of the package available majority have make suffered alteration.",
+    description: "We offer tailored financial planning solutions to help you achieve your goals with confidence.",
     image: "https://live.themewild.com/taxrio/assets/img/service/01.jpg"
   },
   {
     icon: <FaUserTie />,
     title: "Audit & Tax Planning",
-    description: "There are many variation of the package available majority have make suffered alteration.",
+    description: "Expert audit and tax strategies designed to protect your business and maximize your savings.",
     image: "https://live.themewild.com/taxrio/assets/img/service/02.jpg"
   },
   {
     icon: <FaShieldAlt />,
     title: "Audit Report",
-    description: "There are many variation of the package available majority have make suffered alteration.",
+    description: "Accurate and detailed audit reports to give you complete clarity and confidence in your finances.",
     image: "https://live.themewild.com/taxrio/assets/img/service/03.jpg"
   },
   {
     icon: <FaBuilding />,
     title: "Finance Secure",
-    description: "There are many variation of the package available majority have make suffered alteration.",
+    description: "Secure and reliable financial solutions designed to protect what matters most to you.",
     image: "https://live.themewild.com/taxrio/assets/img/service/04.jpg"
   },
   {
     icon: <FaSearchDollar />,
     title: "Tax Audit Support",
-    description: "There are many variation of the package available majority have make suffered alteration.",
+    description: "Comprehensive tax audit assistance to ensure compliance and protect your interests.",
     image: "https://live.themewild.com/taxrio/assets/img/service/05.jpg"
   },
   {
     icon: <FaChartLine />,
     title: "Insurance and Tax",
-    description: "There are many variation of the package available majority have make suffered alteration.",
+    description: "Expert guidance to help you balance insurance needs and tax planning with confidence.",
     image: "https://live.themewild.com/taxrio/assets/img/service/06.jpg"
   }
 ]

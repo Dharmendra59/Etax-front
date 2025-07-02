@@ -31,9 +31,7 @@ export default function About() {
             <span className="highlight">Tax Advisor</span> For You.
           </h2>
           <p className="section-description">
-            There are many variations of passages available but the majority have
-            suffered alteration in some form, by injected humour, or randomised words
-            which don't look even slightly believable.
+"Choose from a range of plans designed to simplify your finances and maximize your savings."
           </p>
 
           <div className="features">
@@ -43,7 +41,7 @@ export default function About() {
               </div>
               <div className="feature-content">
                 <h3>Clients Satisfaction</h3>
-                <p>Take a look at our round up of the best shows.</p>
+                <p>"Discover what makes our clients choose us year after year for reliable service and complete peace of mind."</p>
               </div>
             </div>
 
@@ -53,7 +51,7 @@ export default function About() {
               </div>
               <div className="feature-content">
                 <h3>Professional Team</h3>
-                <p>It has survived words which not only five centuries.</p>
+                <p>"Our experienced team is dedicated to delivering the highest quality financial services."</p>
               </div>
             </div>
           </div>

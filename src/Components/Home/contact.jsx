@@ -13,8 +13,7 @@ export default function hcontact() {
             Expert Consultation
           </h2>
           <p className="description">
-            It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout.
+"Our experts provide tailored guidance to help you overcome challenges and unlock new opportunities for growth."
           </p>
           <Link to="/contact" className="hcontact-button">
             Contact Now

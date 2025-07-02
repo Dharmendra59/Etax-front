@@ -31,9 +31,7 @@ export default function About() {
             <span className="highligh">Finance & Tax</span>.
           </h2>
           <p className="section-description">
-            There are many variations of passages available but the majority have
-            suffered alteration in some form, by injected humour, or randomised words
-            which don't look even slightly believable.
+"Choose from a range of plans designed to simplify your finances and maximize your savings."
           </p>
 
           <div className="features">
@@ -43,7 +41,7 @@ export default function About() {
               </div>
               <div className="feature-content">
                 <h3>Our Mission</h3>
-                <p>There are many variations words passages of Lorem Ipsum don't available, but the majority.</p>
+                <p>"Our mission is to empower individuals and businesses with reliable, efficient, and transparent financial services."</p>
               </div>
             </div>
 
@@ -53,7 +51,7 @@ export default function About() {
               </div>
               <div className="feature-content">
                 <h3>Our Vision</h3>
-                <p>There are many variations words passages of Lorem Ipsum don't available, but the majority.</p>
+                <p>"We aspire to redefine financial services with innovation, integrity, and a commitment to empowering every client we serve."</p>
               </div>
             </div>
           </div>
@@ -69,7 +67,7 @@ export default function About() {
             </div>
             <div className="info">
             <h1>Get Free Professional Advisor</h1>
-            <p>Ready To Help: <span>+91 7905876982</span></p>
+            <p>Ready To Help: <span><a href="tel:+917905876982" style={{ textDecoration: 'none', color: 'inherit' }}>+91 7905876982</a></span></p>
             </div>
             
           </div>

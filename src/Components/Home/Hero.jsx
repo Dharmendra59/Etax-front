@@ -68,8 +68,7 @@ export default function Hero() {
             Financial Services
           </h5>
           <p>
-            There are many variations of passages Lorem Ipsum available but the majority have
-            suffered alteration in some form by injected humour.
+            "We believe in clarity, accuracy, and complete transparency to make your tax filing smooth and stress-free."
           </p>
           <div className="cta-buttons">
             <Link to="/contact">
@@ -104,7 +103,7 @@ export default function Hero() {
               <FaUserTie />
             </div>
             <h3>ITR Filing</h3>
-            <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
+            <p>"Fast, Accurate, Hassle-Free ITR Filing—Because Your Peace of Mind Matters."</p>
           {/* </div> */}
         </Link>
           {/* <div className="sv-card">
@@ -130,14 +129,14 @@ export default function Hero() {
               <FaBuilding />
             </div>
             <h3>GST Registration</h3>
-            <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
+            <p>"Your GST Compliance Partner—Simple, Reliable, Affordable."</p>
           </div>
           <div className="sv-card">
             <div className="icon-circl">
               <FaShieldAlt />
             </div>
             <h3>Tax Consultancy & Other Services</h3>
-            <p>There are many variations words passages of Lorem Ipsum don't available majority</p>
+            <p>"Your Growth Partner for Tax, Compliance & Beyond."</p>
           </div>
           
         </div>

@@ -157,7 +157,7 @@ const TeamSection = () => {
       <div className="team-container">
         <div className="team-header">
           <h2>Meet Our Team</h2>
-          <p>We're a diverse group of passionate individuals working together to create amazing products.</p>
+          <p>"We are a talented group of experts who share a passion for innovation, collaboration, and helping you succeed."</p>
         </div>
 
         <div className="team-grid">

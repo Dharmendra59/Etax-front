@@ -6,19 +6,19 @@ const features = [
     icon: <FaDollarSign />,
     title: "Affordable Cost",
     description:
-      "There are many variations of passages available the majority have suffered alteration in some by injected humour.",
+      "Affordable solutions without compromising on expertise, transparency, or care.",
   },
   {
     icon: <FaChartLine />,
     title: "Client Investment",
     description:
-      "There are many variations of passages available the majority have suffered alteration in some by injected humour.",
+      "Trusted guidance to manage, protect, and maximize the value of your investments.",
   },
   {
     icon: <FaPiggyBank />,
     title: "Save Your Money",
     description:
-      "There are many variations of passages available the majority have suffered alteration in some by injected humour.",
+      "Smart strategies designed to reduce your tax burden and help you keep more of what you earn.",
   },
 ]
 
@@ -34,8 +34,7 @@ export default function ChooseUs() {
             Can Trust Our <span className="highlight">Service</span>
           </h2>
           <p className="section-description">
-            It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout.
+"With proven expertise and a focus on your success, we ensure every service meets the highest standards of quality and care."
           </p>
 
           <div className="features-list">

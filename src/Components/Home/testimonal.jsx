@@ -4,6 +4,7 @@ import {
   FaStar, 
   FaQuoteRight 
 } from 'react-icons/fa'
+import {Link} from "react-router-dom"
 
 import './testimonal.css'
 
@@ -65,13 +66,15 @@ export default function Testimonials() {
             <span className="highlight">Say's</span> About Us
           </h2>
           <p className="section-description">
-            It is a long established fact that a reader will be distracted by the readable
-            content of a page when looking at its layout. All the generators on the
-            Internet tend to repeat predefined chunks.
+"Hear from our clients about how our services have made a positive impact on their businesses and lives."
           </p>
-          <button className="know-more-btn">
+          {/* <button className="know-more-btn">
             Know More <FaArrowRight />
-          </button>
+          </button> */}
+          <Link to="/contact" className="know-more-btn" style={{ textDecoration: 'none' }}>
+            Know More
+            <FaArrowRight className="arrow" />
+          </Link>
         </div>
 
         <div 
