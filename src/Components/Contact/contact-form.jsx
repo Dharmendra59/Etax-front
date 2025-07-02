@@ -51,8 +51,7 @@ export default function ContactForm() {
         <div className="form-section">
           <h2>Get In Touch</h2>
           <p>
-            It is a long established fact that a reader will be distracted by the readable content of a page randomised
-            words which don't look even slightly when looking at its layout.
+"We’d love to hear from you! Get in touch with our team for expert advice, support, or any inquiries you may have."
           </p>
 
           <form className="contact-form" onSubmit={handleSubmit}>

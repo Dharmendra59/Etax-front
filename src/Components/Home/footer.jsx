@@ -6,8 +6,7 @@ import {
   FaEnvelope,
   FaFacebookF,
   FaTwitter,
-  FaLinkedinIn,
-  FaYoutube,
+  FaInstagram,
   FaArrowUp
 } from 'react-icons/fa'
 import Image from '../../assets/blogo.PNG'
@@ -57,7 +56,7 @@ export default function Footer() {
               
             </Link>
             <p className="about-text">
-              We are many variations of passages available but the majority have suffered alteration in some form by injected humour words believable.
+              "Empowering individuals and businesses with expert guidance and dedicated support every step of the way."
             </p>
             <div className="newsletter">
               <h3>Subscribe Our Newsletter</h3>
@@ -138,10 +137,27 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>© Copyright 2025 <span className="highligt">Quick Financial Services</span> All Rights Reserved.</p>
           <div className="social-links">
-            <Link href="#" aria-label="Facebook"><FaFacebookF /></Link>
-            <Link href="#" aria-label="Twitter"><FaTwitter /></Link>
-            <Link href="#" aria-label="LinkedIn"><FaLinkedinIn /></Link>
-            <Link href="#" aria-label="YouTube"><FaYoutube /></Link>
+  <a 
+    href="https://www.facebook.com/share/19xZii9owS/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <FaFacebookF />
+  </a>
+  <a 
+    href="#" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <FaTwitter />
+  </a>
+  <a 
+    href="https://www.instagram.com/quickfinancial.services" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <FaInstagram />
+  </a>
           </div>
         </div>
 

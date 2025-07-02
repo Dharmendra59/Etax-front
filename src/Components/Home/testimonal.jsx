@@ -11,7 +11,7 @@ import './testimonal.css'
 const testimonials = [
   {
     id: 1,
-    text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
+    text: "The team was incredibly supportive and knowledgeable. They made the entire process smooth and stress-free. I highly recommend their services to anyone looking for professional financial guidance.",
     rating: 99,
     author: "Loreta Jones",
     role: "Customer",
@@ -19,7 +19,7 @@ const testimonials = [
   },
   {
     id: 2,
-    text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
+    text: "Excellent service from start to finish. The team was responsive, professional, and always ready to help with my queries.",
     rating: 99,
     author: "Niesha Phips",
     role: "Customer",
@@ -27,7 +27,7 @@ const testimonials = [
   },
   {
     id: 3,
-    text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
+    text: "Their expertise made the entire process easy to understand. I feel confident knowing my finances are in good hands.",
     rating: 99,
     author: "John Smith",
     role: "Customer",
@@ -92,7 +92,7 @@ export default function Testimonials() {
                   <FaQuoteRight />
                 </div>
                 <p className="testimonial-text">{testimonial.text}</p>
-                <div className="rating-badge">{testimonial.rating}</div>
+                {/* <div className="rating-badge">{testimonial.rating}</div> */}
                 <div className="author-info">
                   <img
                     src={testimonial.image || "/placeholder.svg"}

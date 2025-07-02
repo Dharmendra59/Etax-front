@@ -84,10 +84,10 @@ export default function Header() {
         <div className="right-section">
           <div className="social-links">
             <span>Follow Us:</span>
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaTwitter /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaLinkedinIn /></a>
+            <Link to="https://www.facebook.com/share/19xZii9owS/"><FaFacebookF /></Link>
+            <Link to="#"><FaTwitter /></Link>
+            <Link to="https://www.instagram.com/quickfinancial.services"><FaInstagram /></Link>
+            {/* <a href="#"><FaLinkedinIn /></a> */}
           </div>
         </div>
       </div>

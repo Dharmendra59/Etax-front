@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { FaChartLine, FaFileInvoiceDollar, FaBalanceScale, FaCalculator, FaShieldAlt, FaHandshake } from "react-icons/fa"
 import "./img-gallery.css"
+import { Link } from "react-router-dom"
 
 const ImageGallery = () => {
   const [activeFilter, setActiveFilter] = useState("all")
@@ -147,7 +148,7 @@ const ImageGallery = () => {
           <div className="featured-content">
             <h3>Featured: GST Filing Mastery</h3>
             <p>Revolutionize your GST filing process with our cutting-edge service. Streamlined, accurate, and hassle-free.</p>
-            <a href="#" className="featured-btn">Learn More</a>
+            <Link to="/contact" className="featured-btn">Learn More</Link>
           </div>
           <div className="featured-image">
             <img src="https://alankitgst.com/NewsImages/382018152623GSTR-Snapshot.png" alt="Featured Service" />
@@ -180,7 +181,7 @@ const ImageGallery = () => {
                   <div className="item-icon">{item.icon}</div>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                  <a href="#" className="item-link">Explore</a>
+                  <Link to="/contact" className="item-link">Explore</Link>
                 </div>
               </div>
             </div>
