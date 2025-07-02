@@ -250,9 +250,13 @@
 .nav-links a.active,
 .ct-button.active,
 .bt-button.active {
-  color: #ffd700; /* Highlight color */
+  color: #28a745; /* Highlight color */
   font-weight: bold;
   border-bottom: 2px solid #ffd700;
+  /* background-color: #ffd700; */
+}
+.ct-button.active {
+  background-color: #ffd700;
 }
 
 .nav-item a.active {
