@@ -11,7 +11,7 @@ const ContactDataSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://etax-back-1.onrender.com/contact-data/get");
+        const response = await fetch("https://qfs-backend-vszx.onrender.com/contact-data/get");
         const result = await response.json();
         setData(result.query || []);
       } catch (error) {
