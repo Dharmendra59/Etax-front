@@ -13,7 +13,7 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('https://etax-back-1.onrender.com/contact-data/submit', { // Ensure this is correct
+    const response = await fetch('https://qfs-backend-vszx.onrender.com/contact-data/submit', { // Ensure this is correct
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

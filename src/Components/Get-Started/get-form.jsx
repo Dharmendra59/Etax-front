@@ -22,7 +22,7 @@ export default function ContactForm() {
       formData.append('file', file);
 
       try {
-        const response = await fetch('https://etax-back-2.onrender.com/file/file_submit', {
+        const response = await fetch('https://qfs-backend-vszx.onrender.com/api/upload-file', {
           method: 'POST',
           body: formData,
         });
@@ -117,7 +117,7 @@ export default function ContactForm() {
                     onChange={(e) => setFile(e.target.files[0])}
                     accept="image/*, .pdf, .doc, .docx"
                   />
-                  <span className="file-name">{file ? file.name : "Select Image"}</span>
+                  <span className="file-name">{file ? file.name : "Select File"}</span>
                 </label>
               </div>
 

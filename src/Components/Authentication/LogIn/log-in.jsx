@@ -34,7 +34,7 @@ export default function LoginForm() {
       return handleError("All Fields Required");
     }
     try {
-      const url = "https://etax-back-1.onrender.com/auth/login";
+      const url = "https://qfs-backend-vszx.onrender.com/auth/login";
       const response = await fetch(url, {
         method: "POST",
         headers: {

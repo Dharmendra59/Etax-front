@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
-import { FaSearch, FaTrash, FaEnvelope, FaPhone, FaSortAlphaDown, FaSortAlphaUp, FaFile } from "react-icons/fa";
+import { 
+  FaSearch, 
+  FaTrash, 
+  FaEnvelope, 
+  FaPhone, 
+  FaSortAlphaDown, 
+  FaSortAlphaUp, 
+  FaFile 
+} from "react-icons/fa";
 import "./AdminContactUsData.css";
 
 const ContactDataSection = () => {
@@ -11,9 +19,10 @@ const ContactDataSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://etax-back-1.onrender.com/file/file_get");
+        const response = await fetch("https://qfs-backend-vszx.onrender.com/api/download-files");
         const result = await response.json();
-        setData(result.query || []);
+        console.log("API Response:", result);
+        setData(result.data || []);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -37,7 +46,7 @@ const ContactDataSection = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://etax-back-1.onrender.com/file/file_submit/delete/${id}`, {
+      await fetch(`https://qfs-backend-vszx.onrender.com/file/file_submit/delete/${id}`, {
         method: "DELETE",
       });
       setData(data.filter((item) => item._id !== id));
@@ -48,28 +57,20 @@ const ContactDataSection = () => {
 
   const filteredData = data.filter((item) =>
     Object.values(item).some((value) =>
-      value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+      value?.toString().toLowerCase().includes(searchTerm.toLowerCase())
     )
   );
 
   const sortedData = [...filteredData].sort((a, b) => {
+    if (!sortColumn) return 0;
     if (a[sortColumn] < b[sortColumn]) return sortDirection === "asc" ? -1 : 1;
     if (a[sortColumn] > b[sortColumn]) return sortDirection === "asc" ? 1 : -1;
     return 0;
   });
 
-  const handleViewAndDownload = (fileUrl, originalFileName) => {
-    // Open the file in a new tab
+  const handleViewAndDownload = (fileUrl) => {
+    // ✅ ALWAYS open in a new tab only
     window.open(fileUrl, '_blank');
-
-    // Create a link for download with original filename
-    const downloadUrl = fileUrl.replace('/upload/', '/upload/fl_attachment/');
-    const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.download = originalFileName || '';  // Use original filename if available
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
@@ -77,7 +78,12 @@ const ContactDataSection = () => {
       <h2 className="filetext">ITR File Data</h2>
       <div className="search-bar">
         <FaSearch className="search-icon" />
-        <input type="text" placeholder="Search..." value={searchTerm} onChange={handleSearch} />
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
       </div>
       <div className="table-container">
         <table>
@@ -107,7 +113,7 @@ const ContactDataSection = () => {
                 <td>{item.name}</td>
                 <td>{item.mobile}</td>
                 <td>{item.email}</td>
-                <td>{item.fileName || item.file}</td>
+                <td>{item.fileName || "N/A"}</td>
                 <td>{item.message}</td>
                 <td>
                   <div className="action-buttons">
@@ -120,7 +126,14 @@ const ContactDataSection = () => {
                     <a href={`tel:${item.mobile}`} className="contact-btn phone-btn">
                       <FaPhone />
                     </a>
-                    <button className="file-btn" onClick={() => handleViewAndDownload(item.file, item.fileName)}>
+                    <button
+                      className="file-btn"
+                      onClick={() =>
+                        handleViewAndDownload(
+                          `https://qfs-backend-vszx.onrender.com${item.filePath}`
+                        )
+                      }
+                    >
                       <FaFile />
                     </button>
                   </div>

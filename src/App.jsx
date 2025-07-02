@@ -39,7 +39,7 @@ const App = () => {
     }
 
     axios
-      .get("https://etax-back-1.onrender.com/auth/checkauth")
+      .get("https://qfs-backend-vszx.onrender.com/auth/checkauth")
       .then((response) => {
         user.login(response.data.user);
         setLoading(false);
